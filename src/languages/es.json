@@ -1,0 +1,116 @@
+{
+    "homeView": {
+        "welcomeComponent": {
+            "description": "Aplica <strong> Photio </strong> en murallas, estructuras metálicas, calles o donde quieras. Aumenta positivamente la reputación <strong> medioambiental </strong> de tu empresa y aporta a la comunidad en donde estas inserto.",
+            "titleAction": "¡CÓNVERSEMOS!",
+            "descriptionAction": "Juntémosnos a discutir la problemática o desafio a resolver",
+            "textButtonAction": "Agendar reunión"           
+        },
+        "indicatorComponent": {
+            "meters": {
+                "count": "3423",
+                "description": "Metros cuadrados pintados con <strong> Photio </strong>"
+            },
+            "cities": {
+                "count": "58",
+                "description": "Ciudades/Comunas de Chile pintadas con <strong> Photio </strong>"
+            }         
+        },
+        "odsComponent": {
+            "description": "Con nuestros productos contribuimos con el cumplimiento de los siguientes"
+        },
+        "newsResumenComponent": {
+            "description": "Generando confianza desde el primer momento",
+            "news": [
+                {
+                    "id": 1,
+                    "date": "18-Nov-2020",
+                    "title": "Photio, la tecnología chilena que descontamina el aire con pintura",
+                    "origin": "por Fractal",
+                    "description": "El proyecto desarrollado por la empresa Fractal toma como inspiraciónel proceso de fotosíntesis de las plantas"
+                },
+                {
+                    "id": 2,
+                    "date": "18-Nov-2020",
+                    "title": "Photio, la tecnología chilena que descontamina el aire con pintura",
+                    "origin": "por Fractal",
+                    "description": "El proyecto desarrollado por la empresa Fractal toma como inspiraciónel proceso de fotosíntesis de las plantas"
+                },
+                {
+                    "id": 3,
+                    "date": "18-Nov-2020",
+                    "title": "Photio, la tecnología chilena que descontamina el aire con pintura",
+                    "origin": "por Fractal",
+                    "description": "El proyecto desarrollado por la empresa Fractal toma como inspiraciónel proceso de fotosíntesis de las plantas"
+                }
+            ]
+        },
+        "partnersComponent": {
+            "clients": {
+                "title": "CLIENTES",
+                "images": [
+                    "client1",
+                    "client2"
+                ]
+            },
+            "partners": {
+                "title": "SOCIOS ESTRATÉGICOS",
+                "images": [
+                    "partner1",
+                    "partner2",
+                    "partner3"
+                ]
+            }
+        }
+    },
+    "footerView": {
+        "address": {
+            "title": "Dirección",
+            "description": "Badajoz 045, Of 1701B, Las Condes",
+            "link": "https://goo.gl/maps/dkfhnaHRthYw5R7t8"
+        },
+        "mail": {
+            "title": "Escríbenos",
+            "description": "contacto@fractalinnova.com"
+        },
+        "phone": {
+            "title": "Llámanos",
+            "description": "+56 9 7663 1959"
+        },
+        "menu": [
+            {
+                "title": "¿Qué es Photio?",
+                "to": "/"
+            },
+            {
+                "title": "Aplicaciones",
+                "to": "/"
+            },
+            {
+                "title": "Nosotros",
+                "to": "/"
+            },
+            {
+                "title": "Ventas",
+                "to": "/"
+            },
+            {
+                "title": "Contáctanos",
+                "to": "/"
+            }
+        ],
+        "rrss":{
+            "title": "Síguenos",
+            "links": [
+                {
+                    "name": "instagram",
+                    "link": "https://www.instagram.com/photio.nano"
+                },
+                {
+                    "name": "linkedin",
+                    "link": "https://www.linkedin.com/company/photio/"
+                }
+            ]
+        }
+    }
+}

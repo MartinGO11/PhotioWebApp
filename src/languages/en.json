@@ -1,0 +1,10 @@
+{
+    "homeView": {
+        "welcomeComponent": {
+            "description": "Aplica Photio en murallas, estructuras metálicas, calles o donde quieras. Aumenta positivamente la reputación medioambiental de tu empresa y aporta a la comunidad en donde estas inserto.",
+            "titleAction": "¡CÓNVERSEMOS!",
+            "descriptionAction": "Juntémosnos a discutir la problemática o desafio a resolver",
+            "textButtonAction": "Agendar reunión"           
+        }
+    } 
+}
