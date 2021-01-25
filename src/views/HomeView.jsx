@@ -8,6 +8,7 @@ import { OdsComponent } from '../components/home/OdsComponent';
 import { NewsResumenComponents } from '../components/home/NewsResumenComponents';
 import { PartnersComponent } from '../components/home/PartnersComponent';
 import { FooterComponent } from '../components/globals/FooterComponent';
+import { NavbarComponent } from '../components/globals/NavbarComponent';
 
 export const HomeView = () => {
 
@@ -17,6 +18,9 @@ export const HomeView = () => {
   
   return (
     <Grid container direction="column" justify="center" alignItems="stretch">
+      <Grid item>
+        <NavbarComponent />
+      </Grid>
       <Grid item className={classesStyle.welcomeComponent}>
         <WelcomeComponent welcomeText={homeView.welcomeComponent} />
       </Grid>

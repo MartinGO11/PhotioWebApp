@@ -2,9 +2,11 @@ import { Grid } from '@material-ui/core';
 import React from 'react';
 import useStyles from '../../styles/global/AppStyle';
 import colors from '../../styles/global/colors';
+import { default as navbarItems } from '../../constants/navbarItems.json';
 
 
 export const FooterComponent = ({ footerView }) => {
+  console.log(navbarItems);
 
   const classesStyle = useStyles();
 
@@ -37,7 +39,7 @@ export const FooterComponent = ({ footerView }) => {
         </Grid>
         <Grid item md={2} style={{ textAlign: 'right', marginRight: '50px' }}>
           {
-            footerView.menu.map(menuItem => {
+            navbarItems.map(menuItem => {
               return (
                 <p>{menuItem.title}</p>
               )

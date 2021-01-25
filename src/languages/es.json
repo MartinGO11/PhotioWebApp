@@ -77,28 +77,6 @@
             "title": "Llámanos",
             "description": "+56 9 7663 1959"
         },
-        "menu": [
-            {
-                "title": "¿Qué es Photio?",
-                "to": "/"
-            },
-            {
-                "title": "Aplicaciones",
-                "to": "/"
-            },
-            {
-                "title": "Nosotros",
-                "to": "/"
-            },
-            {
-                "title": "Ventas",
-                "to": "/"
-            },
-            {
-                "title": "Contáctanos",
-                "to": "/"
-            }
-        ],
         "rrss":{
             "title": "Síguenos",
             "links": [

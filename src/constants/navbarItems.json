@@ -1,0 +1,22 @@
+[
+    {
+        "title": "¿Qué es Photio?",
+        "to": "/"
+    },
+    {
+        "title": "Aplicaciones",
+        "to": "/applications"
+    },
+    {
+        "title": "Nosotros",
+        "to": "/"
+    },
+    {
+        "title": "Ventas",
+        "to": "/"
+    },
+    {
+        "title": "Contáctanos",
+        "to": "/"
+    }
+]
