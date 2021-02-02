@@ -11,19 +11,6 @@ const useStyles = makeStyles(theme => ({
   },
   content:{
     height: '100vh'
-  },
-  navbarComponent: {
-    background: colors.gray_2,
-    color: colors.white,
-    fontFamily: 'Poppins, sans-serif',
-    fontWeight: 'bold'
-  },
-  footerComponent: {
-    background: colors.blue_2,
-    color: colors.white,
-    fontFamily: 'Poppins, sans-serif',
-    width: '100%',
-    fontSize: '12px'
   }
 }));
 export default useStyles;

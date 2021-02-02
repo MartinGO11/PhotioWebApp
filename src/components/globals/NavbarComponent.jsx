@@ -1,12 +1,15 @@
 import React from 'react';
 import { Grid, Hidden } from '@material-ui/core';
+import globalStyle from '../../styles/global/globalStyle';
 import { default as navbarItems } from '../../constants/navbarItems.json';
-import colors from '../../styles/global/colors';
 
 export const NavbarComponent = () => {
+
+  const globalStyles = globalStyle();
+
   return (
     <>
-      <Grid container direction="row" justify="center" alignItems="center" style={{ background: colors.gray_2 }}>
+      <Grid container direction="row" justify="center" alignItems="center">
         <Hidden mdDown>
           <Grid item md={8}>
             <p style={{textAlign: 'center', color: 'white'}}>

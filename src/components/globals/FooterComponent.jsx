@@ -1,17 +1,16 @@
 import { Grid } from '@material-ui/core';
 import React from 'react';
-import useStyles from '../../styles/global/AppStyle';
+import globalStyle from '../../styles/global/globalStyle';
 import colors from '../../styles/global/colors';
 import { default as navbarItems } from '../../constants/navbarItems.json';
 
 
 export const FooterComponent = ({ footerView }) => {
-  console.log(navbarItems);
 
-  const classesStyle = useStyles();
+  const globalStyles = globalStyle();
 
   return (
-    <div className={classesStyle.footerComponent}>
+    <div className={globalStyles.footerComponent}>
       <Grid container direction="row" justify="flex-end" alignItems="baseline">
         <Grid item md={3}>
           <p style={{ fontWeight: 'bold' }}> {footerView.address.title} </p>

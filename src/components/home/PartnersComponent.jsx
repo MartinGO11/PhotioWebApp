@@ -13,7 +13,7 @@ export const PartnersComponent = ({ partnersContent }) => {
     <>
       <Grid container direction="row" justify="flex-start" alignItems="flex-start" >
         <Grid item xs={5} md={3} style={{ borderBottom: `solid 3px ${colors.green_2}` }}>
-          <p style={{ fontSize: '36px', marginBottom: '0px' }}>{clients.title}</p>
+          <p style={{ fontSize: '36px', marginBottom: '0px', marginLeft: '30px' }}>{clients.title}</p>
         </Grid>
       </Grid>
       <Grid container direction="row" justify="center" alignItems="center" style={{marginTop: '50px', marginBottom: '50px'}} >
@@ -29,7 +29,7 @@ export const PartnersComponent = ({ partnersContent }) => {
       </Grid>
       <Grid container direction="row" justify="flex-start" alignItems="flex-start" >
         <Grid item xs={5} md={3} style={{ borderBottom: `solid 3px ${colors.green_2}` }}>
-          <p style={{ fontSize: '36px', marginBottom: '0px' }}>{partners.title}</p>
+          <p style={{ fontSize: '36px', marginBottom: '0px', marginLeft: '30px' }}>{partners.title}</p>
         </Grid>
       </Grid>
       <Grid container direction="row" justify="center" alignItems="center" style={{marginTop: '50px', marginBottom: '50px'}} >
