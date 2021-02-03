@@ -101,10 +101,12 @@
         }
     },
     "applicationsView": {
-        "carouselContent": {
-            "background": "https: //picsum.photos/id/1/500/300",
-            "description": "GENERA UN <strong>IMPACTO POSITIVO</strong> EN TU EMPRESA Y EN LA COMUNIDAD EN DONDE ESTAS INMERSO"
-        },
+        "carouselContent": [
+            {
+                "background": "https: //picsum.photos/id/1/500/300",
+                "description": "GENERA UN <strong>IMPACTO POSITIVO</strong> EN TU EMPRESA Y EN LA COMUNIDAD EN DONDE ESTAS INMERSO"
+            }
+        ],
         "welcomeComponent": {
             "description": [
                 "Contrucción",
@@ -119,6 +121,7 @@
         "applications": [
             {
                 "title": "CONSTRUCCIÓN",
+                "img": "https://picsum.photos/id/1/500/300",
                 "description": [
                     "Photio se puede añadir en pinturas, concreto u hormigón, sin modificar sus propiedades físicas, durabilidad o aspecto.",
                     "Transforma fachadas de edificios y casas en enormes purificadores de aire."
@@ -133,6 +136,7 @@
             },
             {
                 "title": "TRANSPORTE Y VIALIDAD",
+                "img": "https://picsum.photos/id/1/500/300",
                 "description": [
                     "Aplica el producto directamente en mezclas asfálticas o incorpóralo mediante aspersión sobre pavimento de asfalto o concreto.",
                     "También puedes recubrir el interior de túneles para disminuir la acumulación de contaminantes y evitar el ensuciamiento de paredes."
@@ -147,6 +151,7 @@
             },
             {
                 "title": "AGRICULTURA",
+                "img": "https://picsum.photos/id/1/500/300",
                 "description": [
                     "Compensa y reduce el impacto medioambiental y social del proyecto y las emisiones indirectas.",
                     "Obtén sellos medioambientales.",
@@ -161,6 +166,7 @@
             },
             {
                 "title": "MINERÍA",
+                "img": "https://picsum.photos/id/1/500/300",
                 "description": [
                     "Incorpora el producto en zonas como fundiciones, truckshops o procesos de chancado, para abatir de forma barata y eficiente gases contaminantes y material particulado."
                 ],

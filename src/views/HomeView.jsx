@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import { LanguageContext } from '../contexts/LanguageContext';
 import homeStyle from '../styles/global/homeStyle';
 import globalStyle from '../styles/global/globalStyle';
-import { default as welcome } from '../components/home/welcome.svg';
+import { default as titleIcon } from '../components/home/titleIcon.svg';
 import { IndicatorComponents } from '../components/home/IndicatorComponents';
 import { OdsComponent } from '../components/home/OdsComponent';
 import { NewsResumenComponents } from '../components/home/NewsResumenComponents';
@@ -29,7 +29,7 @@ export const HomeView = () => {
         <NavbarComponent />
       </Grid>
       <Grid item className={globalStyles.principalComponent}>
-        <TitleComponent titleContent={homeView.welcomeComponent} titleImage={welcome} showAction />
+        <TitleComponent titleContent={homeView.welcomeComponent} titleImage={titleIcon} showAction />
       </Grid>
       <Grid item className={homeStyles.indicatorComponent}>
         <IndicatorComponents indicatorText={homeView.indicatorComponent} />
