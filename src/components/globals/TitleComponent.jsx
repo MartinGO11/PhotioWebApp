@@ -29,9 +29,9 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
       </Grid>
       <Grid item xs={6} md={ showAction ? 4 : 6 } className={globalStyles.fontLato} >
         {
-          titleContent.description.map(description => {
+          titleContent.description.map((description, index) => {
             return (
-              <p style={{ marginRight: '20px' }}>{description}</p>
+              <p key={`title-${index}`} style={{ marginRight: '20px' }}>{description}</p>
             )
           })
         }

@@ -14,9 +14,10 @@ export const NavbarComponent = () => {
           <Grid item md={8}>
             <p style={{textAlign: 'center', color: 'white'}}>
               {
-                navbarItems.map(item => {
+                navbarItems.map((item, index) => {
                   return (
                     <a
+                    key={`navbarItem-${index}`}
                     style={{
                       color: 'inherit',
                       textDecoration: 'none',

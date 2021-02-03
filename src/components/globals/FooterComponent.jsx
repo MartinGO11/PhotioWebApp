@@ -38,9 +38,9 @@ export const FooterComponent = ({ footerView }) => {
         </Grid>
         <Grid item md={2} style={{ textAlign: 'right', marginRight: '50px' }}>
           {
-            navbarItems.map(menuItem => {
+            navbarItems.map((menuItem, index) => {
               return (
-                <p>{menuItem.title}</p>
+                <p key={`menuItem-${index}`}>{menuItem.title}</p>
               )
             })
           }
