@@ -4,8 +4,9 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { ApplicationsView } from "./views/ApplicationsView";
 import { HomeView } from "./views/HomeView";
+import { ApplicationsView } from "./views/ApplicationsView";
+import { AboutView } from './views/AboutView';
 
 export default function AppRouter() {
   return (
@@ -13,6 +14,7 @@ export default function AppRouter() {
       <Switch>
         <Route exact path="/" component={ HomeView } />
         <Route exact path="/applications" component={ ApplicationsView } />
+        <Route exact path="/about" component={ AboutView } />
         <Route path="/" component={ HomeView } />
       </Switch>
     </Router>

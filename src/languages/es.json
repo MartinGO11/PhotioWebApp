@@ -178,5 +178,47 @@
                 ]
             }
         ]
+    },
+    "aboutView": {
+        "carouselContent": [
+            {
+                "background": "https: //picsum.photos/id/1/500/300",
+                "description": "SUMA A TU OPERACIÓN O EMPRESA LA EXPERIENCIA Y COMPROMISO DE UN GRUPO DE EXPERTOS EN <strong>INNOVACIÓN Y SUSTENTABILIDAD</strong>"
+            }
+        ],
+        "welcomeComponent": {
+            "description": [
+                " "
+            ],
+            "titleAction": "¡CÓNVERSEMOS!",
+            "descriptionAction": "Juntémosnos a discutir la problemática o desafio a resolver",
+            "textButtonAction": "Agendar reunión"
+        },
+        "aboutItems": [
+            {
+                "title": "QUIENES SOMOS",
+                "img": "https://picsum.photos/id/1/500/300",
+                "description": [
+                    "Profesionales conscientes del impacto social y medioambiental que genera por cada proceso productivo.",
+                    "Agrupando a investigadores, académicos, y profesionales de diferentes rubros, Fractal nace el año 2017 como una empresa que busca resolver el problema de la contaminación atmosférica utilizando tecnología y desarrollos científicos que se encuentran en la frontera del conocimiento.",
+                    "Nuestro equipo acerca el desarrollo científico a las personas, utilizando la innovación como motor de cambio."
+                ],
+                "benefitsDescription": [
+                    "Fractal es una empresa que redefine los límites de lo establecido, implementando y repensando productos de uso masivo, como pinturas, polímeros y asfalto, dándoles propiedades que redefinen su aplicación y uso."
+                ]
+            },
+            {
+                "title": "QUE HACEMOS",
+                "img": "https://picsum.photos/id/1/500/300",
+                "description": [
+                    "Mezclamos academia e industria para llevar a nuestros clientes soluciones simples pero profundamente disruptivas.",
+                    "Utilizando nanotecnología, química de superficies y herramientas de fabricación avanzada, Fractal tiene como misión crear productos que sirvan como herramienta para que cada empresa, municipio y persona pueda compensar y reducir su huella de carbono.",
+                    "A la fecha, somos capaces de simular el proceso de fotosíntesis en superficies como carreteras, fachadas de edificios y casas, además podemos generar atmósferas controladas con foco en agricultura repensando el uso de polímeros industriales."
+                ],
+                "benefitsDescription": [
+                    "Nuestro objetivo es transformar las mayores fuentes de emisión de contaminantes en la solución al problema."
+                ]
+            }
+        ]
     }
 }
