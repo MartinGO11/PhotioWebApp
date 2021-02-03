@@ -220,5 +220,41 @@
                 ]
             }
         ]
+    },
+    "buyView": {
+        "carouselContent": [
+            {
+                "background": "https: //picsum.photos/id/1/500/300",
+                "description": "NOS AJUSTAMOS A LOS REQUERIMIENTOS DE TODAS <strong>TUS IDEAS O PROYECTOS</strong>"
+            }
+        ],
+        "welcomeComponent": {
+            "description": [
+                "Servicios de asesoría y consultoría",
+                "Venta de aditivo"
+            ],
+            "titleAction": "¡CÓNVERSEMOS!",
+            "descriptionAction": "Juntémosnos a discutir la problemática o desafio a resolver",
+            "textButtonAction": "Agendar reunión"
+        },
+        "buyItems": [
+            {
+                "title": "SERVICIO DE ASESORÍA Y CONSULTORIA",
+                "img": "https://picsum.photos/id/1/500/300",
+                "description": [
+                    "Envíanos tus consultas y requerimientos apretando el botón.",
+                    "Nuestros profesionales te atenderán a la brevedad para abordar tu proyecto o idea."
+                ],
+                "actionTitle":"Conversemos"
+            },
+            {
+                "title": "VENTA DE ADITIVO",
+                "img": "https://picsum.photos/id/1/500/300",
+                "description": [
+                    "Si deseas comprar directamente el producto en sus distintos formatos, ponte en contacto con nuestros ejecutivos comerciales haciendo clic en el botón."
+                ],
+                "actionTitle":"Contactos"
+            }
+        ]
     }
 }
