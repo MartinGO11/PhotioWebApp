@@ -15,7 +15,7 @@ export const FooterComponent = ({ footerView }) => {
         <Grid item md={3}>
           <p style={{ fontWeight: 'bold' }}> {footerView.address.title} </p>
           <p>
-            <a target='_blank' href={footerView.address.link} style={{ color: 'inherit', textDecoration: 'none' }}>
+            <a target='_blank' href={footerView.address.link} rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
               {footerView.address.description}
             </a>
           </p>

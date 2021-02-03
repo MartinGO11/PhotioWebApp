@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Hidden } from '@material-ui/core';
-import globalStyle from '../../styles/global/globalStyle';
+// import globalStyle from '../../styles/global/globalStyle';
 import { default as navbarItems } from '../../constants/navbarItems.json';
 
 export const NavbarComponent = () => {
 
-  const globalStyles = globalStyle();
+  // const globalStyles = globalStyle();
 
   return (
     <>

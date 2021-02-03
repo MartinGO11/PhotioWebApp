@@ -21,7 +21,7 @@ export const PartnersComponent = ({ partnersContent }) => {
           clients.images.map(image => {
             return (
               <Grid item xs={5} md={5} style={{ textAlign: 'center' }} >
-                <img src={client1} alt={'image'} />
+                <img src={client1} alt={'imageClient'} />
               </Grid>
             )
           })
@@ -37,7 +37,7 @@ export const PartnersComponent = ({ partnersContent }) => {
           partners.images.map(image => {
             return (
               <Grid item xs={3} md={3} style={{ textAlign: 'center' }} >
-                <img src={partner1} alt={'image'} />
+                <img src={partner1} alt={'imagePartner'} />
               </Grid>
             )
           })
