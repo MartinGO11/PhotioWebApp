@@ -20,25 +20,10 @@ export const HomeView = () => {
   const { dictionary } = useContext(LanguageContext);
   const { homeView, footerView } = dictionary;
 
-  const carouselContent = [
-    {
-      background: 'https://picsum.photos/id/1/500/300',
-      description: 'REPLICAMOS EL PROCESO DE FOTOSÍNTESIS PARA ENTREGARTE AIRE PURO EN CUALQUIER LUGAR '
-    },
-    {
-      background: 'https://picsum.photos/id/2/500/300',
-      description: 'REPLICAMOS EL PROCESO DE FOTOSÍNTESIS PARA ENTREGARTE AIRE PURO EN CUALQUIER LUGAR '
-    },
-    {
-      background: 'https://picsum.photos/id/3/500/300',
-      description: 'REPLICAMOS EL PROCESO DE FOTOSÍNTESIS PARA ENTREGARTE AIRE PURO EN CUALQUIER LUGAR '
-    }
-  ]
-
   return (
     <Grid container direction="column" justify="center" alignItems="stretch">
       <Grid item>
-        <CarouselComponent carouselContent={carouselContent} />
+        <CarouselComponent carouselContent={homeView.carouselContent} />
       </Grid>
       <Grid item className={globalStyles.navbarComponent}>
         <NavbarComponent />

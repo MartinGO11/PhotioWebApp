@@ -28,7 +28,13 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
         <img src={openKey} alt="openKey" style={{ marginRight: '20px' }} />
       </Grid>
       <Grid item xs={6} md={ showAction ? 4 : 6 } className={globalStyles.fontLato} >
-        <p style={{ marginRight: '20px' }}>{titleContent.description}</p>
+        {
+          titleContent.description.map(description => {
+            return (
+              <p style={{ marginRight: '20px' }}>{description}</p>
+            )
+          })
+        }
       </Grid>
       {
         showAction &&
