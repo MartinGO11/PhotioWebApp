@@ -7,8 +7,9 @@ import { default as openKey } from '../home/openKey.svg';
 
 const ColorButton = withStyles((theme) => ({
   root: {
-    color: colors.gray_6,
     backgroundColor: colors.green_2,
+    color: colors.gray_6,
+    fontFamily: 'Poppins, sans-serif',
     '&:hover': {
       backgroundColor: colors.green_1,
     },
@@ -22,10 +23,10 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
   return (
     <Grid container direction="row" justify="flex-start" alignItems="center" spacing={1} >
       <Grid item xs={4} md={3} style={{ textAlign: 'center' }} >
-        <img src={titleImage} alt="titleImage" />
+        <img src={titleImage} alt="titleImage" style={{maxWidth: '100%'}} />
       </Grid>
       <Grid item xs={1} style={{ textAlign: 'right', paddingTop: '25px', paddingBottom: '25px' }}>
-        <img src={openKey} alt="openKey" style={{ marginRight: '20px' }} />
+        <img src={openKey} alt="openKey" style={{ marginRight: '20px', maxHeight: '100%' }} />
       </Grid>
       <Grid item xs={6} md={ showAction ? 4 : 6 } className={globalStyles.fontLato} >
         {

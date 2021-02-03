@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import { LanguageContext } from '../contexts/LanguageContext';
 // import homeStyle from '../styles/global/homeStyle';
 import globalStyle from '../styles/global/globalStyle';
-import { default as titleIcon } from '../components/applications/titleIcon.svg';
+import { default as titleIcon } from '../components/about/titleIcon.svg';
 import { FooterComponent } from '../components/globals/FooterComponent';
 import { NavbarComponent } from '../components/globals/NavbarComponent';
 import { CarouselComponent } from '../components/globals/CarouselComponent';

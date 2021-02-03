@@ -4,6 +4,7 @@ import globalStyle from '../../styles/global/globalStyle';
 import homeStyle from '../../styles/global/homeStyle';
 import { default as odsBanner } from './odsBanner.svg';
 import { default as ods } from './ods.svg'
+import { default as odsDesktop } from './odsDesktop.svg'
 
 export const OdsComponent = ({ odsText }) => {
 
@@ -19,13 +20,13 @@ export const OdsComponent = ({ odsText }) => {
           </Grid>
           <Grid item md={3}>
             <p className={globalStyles.paragraphImportant} style={{ marginLeft: '50px' }}>{odsText.description}</p>
-            <img src={odsBanner} alt="odsBanner" style={{ marginLeft: '50px' }} />
+            <img src={odsBanner} alt="odsBanner" style={{ marginLeft: '50px', maxWidth: '100%' }} />
           </Grid>
           <Grid item md={2} >
             {/* vacio */}
           </Grid>
           <Grid item md={6} className={globalStyles.center}>
-            <img src={ods} alt="ods" />
+            <img src={odsDesktop} alt="ods" style={{maxWidth: '100%' }} />
           </Grid>
         </Grid>
       </Hidden>
@@ -39,7 +40,8 @@ export const OdsComponent = ({ odsText }) => {
             <img src={odsBanner} alt="odsBanner" />
           </Grid>
           <Grid item xs={8} className={globalStyles.center}>
-            <img src={ods} alt="ods" />
+          <img src={odsDesktop} alt="ods" style={{maxWidth: '100%' }} />
+            {/* <img src={ods} alt="ods" /> */}
           </Grid>
         </Grid>
       </Hidden>
