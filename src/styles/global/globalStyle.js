@@ -29,6 +29,15 @@ const globalStyle = makeStyles(theme => ({
     width: '100%',
     fontSize: '12px'
   },
+  cardComponentDesktop: {
+    marginTop: '60px',
+    marginBottom: '60px',
+  },
+  cardComponentTextDesktop: {
+    marginLeft: '35px',
+    paddingTop: '50px',
+    fontFamily: 'Lato, sans-serif',
+  },
   newsResumenComponent: {
     color: colors.green_1
   },
