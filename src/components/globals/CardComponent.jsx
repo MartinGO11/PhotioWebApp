@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Hidden } from '@material-ui/core';
 import globalStyle from '../../styles/global/globalStyle';
 
-export const CardComponent = ({ cardContent, color }) => {
+export const CardComponent = ({ cardContent, color, benefits=false }) => {
 
   const globalStyles = globalStyle();
 
@@ -23,16 +23,19 @@ export const CardComponent = ({ cardContent, color }) => {
           }}>
             {cardContent.title}
           </h1>
-          <div style={{ borderLeft: `solid 8px ${color}` }}>
+          <div style={ benefits ? { borderLeft: `solid 8px ${color}` } : {}}>
             {
               cardContent.description.map((description, index) => {
                 return (
-                  <p key={`descriptionCard-${index}`} style={{ paddingLeft: '10px' }}>{description}</p>
+                  <p key={`descriptionCard-${index}`} style={ benefits ? { paddingLeft: '10px' } : {}}>{description}</p>
                 )
               })
             }
           </div>
-          <h2 style={{ color }}>{cardContent.benefitsTitle}</h2>
+          {
+            benefits &&
+            <h2 style={{ color }}>{cardContent.benefitsTitle}</h2>
+          }
           {
             cardContent.benefitsDescription.map((benefits, index) => {
               return (

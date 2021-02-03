@@ -10,7 +10,7 @@ export const ApplicationsComponent = ({applicationsContent}) => {
     {
       applicationsContent.map((application, index) => {
         return (
-          <CardComponent key={`card-${index}`} cardContent={application} color={ index % 2 === 0 ? colors.green_1 : colors.blue_1} />
+          <CardComponent key={`card-${index}`} cardContent={application} color={ index % 2 === 0 ? colors.green_1 : colors.blue_1} benefits />
         )
       })
     }
