@@ -8,6 +8,7 @@ import { HomeView } from "./views/HomeView";
 import { ApplicationsView } from "./views/ApplicationsView";
 import { AboutView } from './views/AboutView';
 import { BuyView } from "./views/BuyView";
+import { ContactView } from "./views/ContactView";
 
 export default function AppRouter() {
   return (
@@ -17,6 +18,7 @@ export default function AppRouter() {
         <Route exact path="/applications" component={ ApplicationsView } />
         <Route exact path="/about" component={ AboutView } />
         <Route exact path="/buy" component={ BuyView } />
+        <Route exact path="/contact" component={ ContactView } />
         <Route path="/" component={ HomeView } />
       </Switch>
     </Router>
