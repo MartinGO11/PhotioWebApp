@@ -1,22 +1,10 @@
 import React from 'react';
-import { Button, Grid, Hidden } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import { Grid, Hidden } from '@material-ui/core';
 import colors from '../../styles/global/colors';
 import globalStyle from '../../styles/global/globalStyle';
+import { ColorButton } from '../../styles/customStyles/ColorButton';
 import { default as buyIcon } from './buyIcon.png';
 import { default as serviceIcon } from './serviceIcon.png';
-
-
-const ColorButton = withStyles((theme) => ({
-  root: {
-    color: colors.gray_6,
-    backgroundColor: colors.green_2,
-    fontFamily: 'Poppins, sans-serif',
-    '&:hover': {
-      backgroundColor: colors.green_1,
-    },
-  },
-}))(Button);
 
 const icons = [serviceIcon, buyIcon];
 

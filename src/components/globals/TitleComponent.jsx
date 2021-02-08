@@ -1,20 +1,9 @@
 import React from 'react';
-import { Grid, Hidden, Button } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import { Grid, Hidden } from '@material-ui/core';
 import globalStyle from '../../styles/global/globalStyle';
 import colors from '../../styles/global/colors';
+import { ColorButton } from '../../styles/customStyles/ColorButton';
 import { default as openKey } from '../home/openKey.svg';
-
-const ColorButton = withStyles((theme) => ({
-  root: {
-    backgroundColor: colors.green_2,
-    color: colors.gray_6,
-    fontFamily: 'Poppins, sans-serif',
-    '&:hover': {
-      backgroundColor: colors.green_1,
-    },
-  },
-}))(Button);
 
 export const TitleComponent = ({ titleContent, titleImage, showAction = false }) => {
 
