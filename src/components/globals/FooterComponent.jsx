@@ -16,7 +16,7 @@ export const FooterComponent = ({ footerView }) => {
   return (
     <div className={globalStyles.footerComponent}>
       <Grid container direction="row" justify="space-evenly" alignItems="baseline">
-        <Grid item xs={10} md={3}>
+        <Grid item xs={7} md={3}>
           <Grid container direction="row" justify="flex-start" alignItems="center" >
             <Grid item xs={2} style={{ textAlign: 'center' }} >
               <img src={pinIcon} alt={`Photio-footerItem-${footerView.address.title}`} />
@@ -31,7 +31,7 @@ export const FooterComponent = ({ footerView }) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={10} md={3}>
+        <Grid item xs={7} md={3}>
           <Grid container direction="row" justify="flex-start" alignItems="center" >
             <Grid item xs={2} style={{ textAlign: 'center' }} >
               <img src={mailIcon} alt={`Photio-footerItem-${footerView.mail.title}`} />
@@ -47,7 +47,7 @@ export const FooterComponent = ({ footerView }) => {
           </Grid>
 
         </Grid>
-        <Grid item xs={10} md={2}>
+        <Grid item xs={7} md={2}>
           <Grid container direction="row" justify="flex-start" alignItems="center" >
             <Grid item xs={2} style={{ textAlign: 'center' }} >
               <img src={phoneIcon} alt={`Photio-footerItem-${footerView.phone.title}`} />
@@ -66,7 +66,7 @@ export const FooterComponent = ({ footerView }) => {
 
       <Grid container direction="row" justify="center" alignItems="flex-end" style={{ marginTop: '20px' }}>
         <Grid item xs={10} style={{ textAlign: 'center' }}>
-          <p style={{ fontWeight: 'bold', letterSpacing: '6px' }}>
+          <p style={{ fontWeight: 'bold', letterSpacing: '6px', marginBottom: '30px' }}>
             <a target='_blank' href='https://www.linkedin.com/company/photio/' rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
               <img src={linkedinIcon} alt="Photio-footerItem-Linkedin" style={{marginRight: '10px'}} />
             </a>
