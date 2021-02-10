@@ -23,7 +23,7 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
             {
               titleContent.description.map((description, index) => {
                 return (
-                  <div key={`title-${index}`} style={{ marginRight: '20px', fontSize: '18px' }}>
+                  <div key={`title-${index}`} style={{ marginRight: '20px', fontSize: '21px' }}>
                     {description}
                   </div>
                 )
