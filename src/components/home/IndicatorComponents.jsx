@@ -11,7 +11,8 @@ export const IndicatorComponents = ({ indicatorText }) => {
   return (
     <>
     <Hidden smDown>
-      <Grid container direction="row" justify="center" alignItems="center" spacing={1} style={{paddingTop: '30px'}}  >
+      <Grid container direction="row" justify="space-evenly" alignItems="center" spacing={1} style={{paddingTop: '30px'}}  >
+        <Grid item xs={1} />
         <Grid item xs={4} md={2} className={globalStyles.fontLato} >
           <img src={paintRoll} alt="paintRoll" />
           <p className={globalStyles.paragraphTitle} style={{ margin: '0px' }}>{indicatorText.meters.count}</p>
@@ -22,6 +23,7 @@ export const IndicatorComponents = ({ indicatorText }) => {
           <p className={globalStyles.paragraphTitle} style={{ margin: '0px' }}>{indicatorText.cities.count}</p>
           <p style={{ fontSize: '24px', margin: '0px' }}>{indicatorText.cities.description}</p>
         </Grid>
+        <Grid item xs={1} />
       </Grid>
     </Hidden>
     <Hidden mdUp>
