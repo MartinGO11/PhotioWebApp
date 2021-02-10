@@ -9,19 +9,19 @@ export const NavbarComponent = () => {
       <Grid container direction="row" justify="center" alignItems="center">
         <Hidden mdDown>
           <Grid item md={10}>
-            <p style={{textAlign: 'center', color: 'white', fontSize: '18px'}}>
+            <p style={{ textAlign: 'center', color: 'white', fontSize: '18px' }}>
               {
                 navbarItems.map((item, index) => {
                   return (
                     <a
-                    key={`navbarItem-${index}`}
-                    style={{
-                      color: 'inherit',
-                      textDecoration: 'none',
-                      marginLeft: '3vw',
-                      marginRight: '3vw'
-                    }} 
-                    href={item.to}>
+                      key={`navbarItem-${index}`}
+                      style={{
+                        color: 'inherit',
+                        textDecoration: 'none',
+                        marginLeft: '3vw',
+                        marginRight: '3vw'
+                      }}
+                      href={item.to}>
                       { item.title }
                     </a>
                   )
