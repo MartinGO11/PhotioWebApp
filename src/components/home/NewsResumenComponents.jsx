@@ -10,7 +10,7 @@ export const NewsResumenComponents = ({ newsText }) => {
 
   return (
     <>
-      <Grid container direction="row" justify="flex-start" alignItems="center" spacing={1} className={homeStyles.newsResumenComponent} >
+      <Grid container direction="row" justify="flex-start" alignItems="center" className={homeStyles.newsResumenComponent} >
         <Grid item xs={1} />
         <Grid item xs={10} md={2} >
           <p style={{color: colors.blue_1, fontSize: '48px', fontWeight: 'bold', marginBottom: '0px'}}>NOTICIAS</p>
@@ -20,7 +20,7 @@ export const NewsResumenComponents = ({ newsText }) => {
         </Grid>
       </Grid>
 
-      <Grid container direction="row" justify="flex-start" alignItems="center" spacing={1} className={homeStyles.newsResumenComponent} >
+      <Grid container direction="row" justify="flex-start" alignItems="center" className={homeStyles.newsResumenComponent} >
         {
           newsText.news.map(article => {
             return (

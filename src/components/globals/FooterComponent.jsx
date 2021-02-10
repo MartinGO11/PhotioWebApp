@@ -64,7 +64,7 @@ export const FooterComponent = ({ footerView }) => {
         </Grid>
       </Grid>
 
-      <Grid container direction="row" justify="center" alignItems="flex-end" style={{ marginTop: '20px' }}>
+      <Grid container direction="row" justify="center" alignItems="center" style={{ marginTop: '20px'}}>
         <Grid item xs={10} style={{ textAlign: 'center' }}>
           <p style={{ fontWeight: 'bold', letterSpacing: '6px', marginBottom: '30px' }}>
             <a target='_blank' href='https://www.linkedin.com/company/photio/' rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
@@ -74,7 +74,7 @@ export const FooterComponent = ({ footerView }) => {
               <img src={instagramIcon} alt="Photio-footerItem-Instagram" style={{marginRight: '10px'}} />
             </a>
             {footerView.rrss.title}</p>
-          <p style={{ color: colors.gray_4 }}><span style={{ color: colors.gray_3, fontWeight: 'Bold' }}> FRACTAL - </span>Copyright 2021. Todos los derechos reservados.</p>
+          <p style={{ color: colors.gray_4 }}><span style={{ color: colors.gray_3, fontWeight: 'Bold' }}> FRACTAL - </span>&copy; Copyright 2021. Todos los derechos reservados.</p>
         </Grid>
       </Grid>
     </div>

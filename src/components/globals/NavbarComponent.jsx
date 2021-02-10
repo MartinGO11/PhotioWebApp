@@ -1,18 +1,15 @@
 import React from 'react';
 import { Grid, Hidden } from '@material-ui/core';
-// import globalStyle from '../../styles/global/globalStyle';
 import { default as navbarItems } from '../../constants/navbarItems.json';
 
 export const NavbarComponent = () => {
-
-  // const globalStyles = globalStyle();
 
   return (
     <>
       <Grid container direction="row" justify="center" alignItems="center">
         <Hidden mdDown>
-          <Grid item md={8}>
-            <p style={{textAlign: 'center', color: 'white'}}>
+          <Grid item md={10}>
+            <p style={{textAlign: 'center', color: 'white', fontSize: '18px'}}>
               {
                 navbarItems.map((item, index) => {
                   return (
@@ -21,8 +18,8 @@ export const NavbarComponent = () => {
                     style={{
                       color: 'inherit',
                       textDecoration: 'none',
-                      marginLeft: '20px',
-                      marginRight: '20px'
+                      marginLeft: '3vw',
+                      marginRight: '3vw'
                     }} 
                     href={item.to}>
                       { item.title }

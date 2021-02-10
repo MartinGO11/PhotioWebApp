@@ -12,8 +12,9 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
   return (
     <>
       <Hidden smDown>
-        <Grid container direction="row" justify="flex-start" alignItems="center" spacing={1} >
-          <Grid item xs={4} md={3} style={{ textAlign: 'center' }} >
+        <Grid container direction="row" justify="flex-start" alignItems="center" >
+          <Grid item xs={1} />
+          <Grid item xs={4} md={2} style={{ textAlign: 'left' }} >
             <img src={titleImage} alt="titleImage" style={{ maxWidth: '100%' }} />
           </Grid>
           <Grid item xs={1} style={{ textAlign: 'right', paddingTop: '25px', paddingBottom: '25px' }}>
@@ -38,7 +39,7 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
         </Grid>
       </Hidden>
       <Hidden mdUp>
-        <Grid container direction="row" justify="center" alignItems="center" spacing={1} >
+        <Grid container direction="row" justify="center" alignItems="center" >
           <Grid item xs={3} style={{ textAlign: 'center' }} >
             <img src={titleImage} alt="titleImage" style={{ maxWidth: '100%' }} />
           </Grid>
@@ -57,10 +58,10 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
             }
           </Grid>
         </Grid>
-        <Grid container direction="row" justify="center" alignItems="center" spacing={1} className={`${globalStyles.fontPoppins} ${globalStyles.secondaryComponent}`} >
+        <Grid container direction="row" justify="center" alignItems="center" className={`${globalStyles.fontPoppins} ${globalStyles.secondaryComponent}`} >
             <Grid item xs={7} >
               <p style={{ color: colors.blue_1, fontWeight: 'bold', fontSize: '18px', marginBottom: '0px' }}>{titleContent.titleAction}</p>
-              <p style={{ fontSize: '14px', marginTop: '0px' }}>{titleContent.descriptionAction}</p>
+              <p style={{ fontSize: '14px', marginTop: '0px', color: 'white' }}>{titleContent.descriptionAction}</p>
             </Grid>
             <Grid item xs={4}>
               <ColorButton variant="contained">

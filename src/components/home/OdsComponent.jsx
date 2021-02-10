@@ -14,7 +14,7 @@ export const OdsComponent = ({ odsText }) => {
   return (
     <>
       <Hidden smDown>
-        <Grid container direction="row" justify="center" alignItems="center" spacing={1} className={homeStyles.odsComponent} >
+        <Grid container direction="row" justify="center" alignItems="center" className={homeStyles.odsComponent} >
           <Grid item md={3}>
             <p className={globalStyles.paragraphImportant} style={{ marginLeft: '50px' }}>{odsText.description}</p>
             <img src={odsBannerDesktop} alt="odsBanner" style={{ marginLeft: '50px', maxWidth: '100%' }} />
@@ -29,7 +29,7 @@ export const OdsComponent = ({ odsText }) => {
       </Hidden>
 
       <Hidden mdUp>
-        <Grid container direction="row" justify="center" alignItems="center" spacing={1} className={globalStyles.principalComponent} >
+        <Grid container direction="row" justify="center" alignItems="center" className={globalStyles.principalComponent} style={{paddingBottom: '15px'}} >
           <Grid item xs={10} className={globalStyles.center}>
             <p style={{fontSize: '16px', marginBottom: '0px'}}>{odsText.description}</p>
           </Grid>
