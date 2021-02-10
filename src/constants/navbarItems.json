@@ -1,4 +1,8 @@
-[
+[   
+    {
+    "title": "Inicio",
+    "to": "/"
+    },
     {
         "title": "¿Qué es Photio?",
         "to": "/"
