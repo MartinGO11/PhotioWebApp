@@ -1,9 +1,22 @@
 import React from 'react';
-import { Grid, Hidden } from '@material-ui/core';
+import { Grid, Hidden, withStyles, Button } from '@material-ui/core';
 import globalStyle from '../../styles/global/globalStyle';
 import colors from '../../styles/global/colors';
-import { ColorButton } from '../../styles/customStyles/ColorButton';
+// import { ColorButton } from '../../styles/customStyles/ColorButton';
 import { default as openKey } from '../home/openKey.svg';
+
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: colors.gray_6,
+    padding: '5px 15px 5px 15px',
+    backgroundColor: colors.green_2,
+    fontFamily: 'Poppins, sans-serif',
+    '&:hover': {
+      backgroundColor: colors.green_1,
+    },
+  }
+}))(Button);
+
 
 export const TitleComponent = ({ titleContent, titleImage, showAction = false }) => {
 
@@ -34,7 +47,9 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
           <Grid item md={3} className={globalStyles.fontPoppins} style={{ textAlign: 'center' }}>
             <p className={globalStyles.paragraphTitle} style={{ color: colors.blue_1, fontWeight: 'bold', marginBottom: '0px' }}>{titleContent.titleAction}</p>
             <p className={globalStyles.paragraph} style={{ marginLeft: '50px', marginRight: '50px', marginTop: '0px', marginBottom: '9px' }}>{titleContent.descriptionAction}</p>
-            <ColorButton variant="contained" style={{ marginBottom: '30px' }}>{titleContent.textButtonAction}</ColorButton>
+            <ColorButton variant="contained" style={{ marginBottom: '30px' }}>
+              <p style={{margin: '0px'}}>{titleContent.textButtonAction}</p>
+            </ColorButton>
           </Grid>
         </Grid>
       </Hidden>

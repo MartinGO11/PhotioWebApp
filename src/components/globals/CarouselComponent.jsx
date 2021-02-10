@@ -5,7 +5,7 @@ import logoPhotio from './logoPhotioCarousel.svg';
 export const CarouselComponent = ({ carouselContent }) => {
   return (
     <Grid container direction="row" justify="center" alignItems="center">
-      <Grid item xs={12} style={{ maxWidth: '100vw' }}>
+      <Grid item xs={12}>
         <div style={{
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',

@@ -1,12 +1,38 @@
 import React from 'react';
-import { Grid, Hidden } from '@material-ui/core';
+import { Grid, Hidden, withStyles, Button } from '@material-ui/core';
 import colors from '../../styles/global/colors';
 import globalStyle from '../../styles/global/globalStyle';
-import { ColorButton } from '../../styles/customStyles/ColorButton';
+// import { ColorButton } from '../../styles/customStyles/ColorButton';
 import { default as buyIcon } from './buyIcon.png';
 import { default as serviceIcon } from './serviceIcon.png';
 
 const icons = [serviceIcon, buyIcon];
+
+const ColorButtonDesktop = withStyles((theme) => ({
+  root: {
+    color: colors.gray_6,
+    fontSize: '18px',
+    padding: '3px 15px 3px 15px',
+    backgroundColor: colors.green_2,
+    fontFamily: 'Poppins, sans-serif',
+    '&:hover': {
+      backgroundColor: colors.green_1,
+    },
+  },
+}))(Button);
+
+const ColorButtonMobile = withStyles((theme) => ({
+  root: {
+    color: colors.gray_6,
+    fontSize: '14px',
+    padding: '3px 15px 3px 15px',
+    backgroundColor: colors.green_2,
+    fontFamily: 'Poppins, sans-serif',
+    '&:hover': {
+      backgroundColor: colors.green_1,
+    },
+  },
+}))(Button);
 
 export const BuyItemComponent = ({ buyContent }) => {
 
@@ -19,11 +45,13 @@ export const BuyItemComponent = ({ buyContent }) => {
           {
             buyContent.map((item, index) => {
               return (
-                <Grid item xs={3} key={`buyItem-${index}`} style={{ textAlign: 'center', color: colors.blue_1 }} className={globalStyles.fontLato}>
+                <Grid item xs={3} key={`Photio-buyItem-${index}`} style={{ textAlign: 'center', color: colors.blue_1 }} className={globalStyles.fontLato}>
                   <img src={icons[index]} alt={`Photio-service-${index}`} />
-                  <h1>{item.title}</h1>
-                  <p>{item.description}</p>
-                  <ColorButton>{item.actionTitle}</ColorButton>
+                  <h1 style={{ fontSize: '24px' }}>{item.title}</h1>
+                  <p style={{ fontSize: '18px' }}>{item.description}</p>
+                  <ColorButtonDesktop>
+                    {item.actionTitle}
+                  </ColorButtonDesktop>
                 </Grid>
               )
             })
@@ -35,14 +63,14 @@ export const BuyItemComponent = ({ buyContent }) => {
           {
             buyContent.map((item, index) => {
               return (
-                <Grid container direction="row" justify="center" alignItems="center" >
+                <Grid key={`Photio-buyItem-${index}`} container direction="row" justify="center" alignItems="center" >
                   <Grid item xs={3}>
-                    <img src={icons[index]} alt={`Photio-service-${index}`} style={{textAlign: 'center'}} />
+                    <img src={icons[index]} alt={`Photio-service-${index}`} style={{ textAlign: 'center' }} />
                   </Grid>
-                  <Grid item xs={6} key={`buyItem-${index}`} style={{ color: colors.blue_1 }} className={globalStyles.fontLato}>
-                    <h1>{item.title}</h1>
-                    <p>{item.description}</p>
-                    <ColorButton>{item.actionTitle}</ColorButton>
+                  <Grid item xs={6} style={{ color: colors.blue_1 }} className={globalStyles.fontLato}>
+                    <h1 style={{fontSize: '18px'}}>{item.title}</h1>
+                    <p style={{fontSize: '12px'}}>{item.description}</p>
+                    <ColorButtonMobile>{item.actionTitle}</ColorButtonMobile>
                   </Grid>
                 </Grid>
               )
