@@ -47,9 +47,11 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
           <Grid item md={3} className={globalStyles.fontPoppins} style={{ textAlign: 'center' }}>
             <p className={globalStyles.paragraphTitle} style={{ color: colors.blue_1, fontWeight: 'bold', marginBottom: '0px' }}>{titleContent.titleAction}</p>
             <p className={globalStyles.paragraph} style={{ marginLeft: '50px', marginRight: '50px', marginTop: '0px', marginBottom: '9px' }}>{titleContent.descriptionAction}</p>
-            <ColorButton variant="contained" style={{ marginBottom: '30px' }}>
-              <p style={{margin: '0px'}}>{titleContent.textButtonAction}</p>
-            </ColorButton>
+            <a href="/talk" style={{textDecoration: 'none'}}>
+              <ColorButton variant="contained" style={{ marginBottom: '30px' }}>
+                <p style={{ margin: '0px' }}>{titleContent.textButtonAction}</p>
+              </ColorButton>
+            </a>
           </Grid>
         </Grid>
       </Hidden>
@@ -74,18 +76,20 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
           </Grid>
         </Grid>
         <Grid container direction="row" justify="center" alignItems="center" className={`${globalStyles.fontPoppins} ${globalStyles.secondaryComponent}`} >
-            <Grid item xs={7} >
-              <p style={{ color: colors.blue_1, fontWeight: 'bold', fontSize: '18px', marginBottom: '0px' }}>{titleContent.titleAction}</p>
-              <p style={{ fontSize: '14px', marginTop: '0px', color: 'white' }}>{titleContent.descriptionAction}</p>
-            </Grid>
-            <Grid item xs={4}>
+          <Grid item xs={7} >
+            <p style={{ color: colors.blue_1, fontWeight: 'bold', fontSize: '18px', marginBottom: '0px' }}>{titleContent.titleAction}</p>
+            <p style={{ fontSize: '14px', marginTop: '0px', color: 'white' }}>{titleContent.descriptionAction}</p>
+          </Grid>
+          <Grid item xs={4}>
+            <a href="/talk" style={{textDecoration: 'none'}}>
               <ColorButton variant="contained">
-                <p style={{fontSize: '14px', margin: '0px'}}>
+                <p style={{ fontSize: '14px', margin: '0px' }}>
                   {titleContent.textButtonAction}
                 </p>
               </ColorButton>
-            </Grid>
+            </a>
           </Grid>
+        </Grid>
       </Hidden>
     </>
   )

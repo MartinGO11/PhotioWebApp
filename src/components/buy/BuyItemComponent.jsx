@@ -49,9 +49,11 @@ export const BuyItemComponent = ({ buyContent }) => {
                   <img src={icons[index]} alt={`Photio-service-${index}`} />
                   <h1 style={{ fontSize: '24px' }}>{item.title}</h1>
                   <p style={{ fontSize: '18px' }}>{item.description}</p>
-                  <ColorButtonDesktop>
-                    {item.actionTitle}
-                  </ColorButtonDesktop>
+                  <a href={item.to} style={{textDecoration: 'none'}}>
+                    <ColorButtonDesktop>
+                      {item.actionTitle}
+                    </ColorButtonDesktop>
+                  </a>
                 </Grid>
               )
             })
@@ -68,9 +70,11 @@ export const BuyItemComponent = ({ buyContent }) => {
                     <img src={icons[index]} alt={`Photio-service-${index}`} style={{ textAlign: 'center' }} />
                   </Grid>
                   <Grid item xs={6} style={{ color: colors.blue_1 }} className={globalStyles.fontLato}>
-                    <h1 style={{fontSize: '18px'}}>{item.title}</h1>
-                    <p style={{fontSize: '12px'}}>{item.description}</p>
-                    <ColorButtonMobile>{item.actionTitle}</ColorButtonMobile>
+                    <h1 style={{ fontSize: '18px' }}>{item.title}</h1>
+                    <p style={{ fontSize: '12px' }}>{item.description}</p>
+                    <a href={item.to} style={{textDecoration: 'none'}}>
+                      <ColorButtonMobile>{item.actionTitle}</ColorButtonMobile>
+                    </a>
                   </Grid>
                 </Grid>
               )

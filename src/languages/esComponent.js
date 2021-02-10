@@ -262,6 +262,7 @@ export const items = {
       {
         title: "SERVICIO DE ASESORÍA Y CONSULTORIA",
         img: "https://picsum.photos/id/1/500/300",
+        to: '/talk',
         description: [
           <p style={{ margin: '0px', padding: '0px' }}>Envíanos tus consultas y requerimientos <strong>apretando el botón.</strong></p>,
           <p style={{ margin: '0px', padding: '0px' }}>Nuestros profesionales te atenderán a la brevedad para abordar tu proyecto o idea.</p>
@@ -271,6 +272,7 @@ export const items = {
       {
         title: "VENTA DE ADITIVO",
         img: "https://picsum.photos/id/1/500/300",
+        to: '/contact',
         description: [
           <p style={{ margin: '0px', padding: '0px' }}>Si deseas comprar directamente el producto en sus distintos formatos, ponte en contacto con nuestros ejecutivos comerciales <strong>haciendo clic en el botón.</strong></p>
         ],
@@ -282,7 +284,7 @@ export const items = {
     carouselContent: [
       {
         background: "https: //picsum.photos/id/1/500/300",
-        description: <p style={{ margin: '0px', padding: '0px' }}>Utilizando nanotecnología y procesos químicos de vanguardia, ofrecemos una alternativa simple y rápida para <strong>compensar y reducir el impacto medioambiental y social de tus proyectos</strong></p>
+        description: <p style={{ margin: '0px', padding: '0px', textTransform: 'uppercase' }}>Utilizando nanotecnología y procesos químicos de vanguardia, ofrecemos una alternativa simple y rápida para <strong>compensar y reducir el impacto medioambiental y social de tus proyectos</strong></p>
       }
     ],
     welcomeComponent: {
@@ -298,19 +300,19 @@ export const items = {
       {
         img: step1,
         description: [
-          <p style={{ padding: '0px' }}>Incorpora Photio en el material que desees</p>,
-          <p style={{ padding: '0px', textTransform: 'uppercase' }}>pintura, asfalto, concreto, hormigón u otro</p>,
-          <p style={{ padding: '0px' }}>Observa como el material no cambia sus propiedades como color, brillo o durabilidad, y aplica la mezcla donde desees.</p>,
-          <p style={{ padding: '0px', fontWeight: 'bold' }}>Incorpóralo donde quieras sin restricciones</p>
+          <p style={{ padding: '0px', marginLeft: '30px' }}>Incorpora Photio en el material que desees</p>,
+          <p style={{ padding: '0px', marginLeft: '30px', textTransform: 'uppercase' }}>pintura, asfalto, concreto, hormigón u otro</p>,
+          <p style={{ padding: '0px', marginLeft: '30px' }}>Observa como el material no cambia sus propiedades como color, brillo o durabilidad, y aplica la mezcla donde desees.</p>,
+          <p style={{ padding: '0px', marginLeft: '30px', fontWeight: 'bold' }}>Incorpóralo donde quieras sin restricciones</p>
         ],
         actionTitle: "Conversemos"
       },
       {
         img: step2,
         description: [
-          <p style={{ padding: '0px' }}>El producto al distribuirse en el lugar de aplicación y al tomar contacto con la radiación solar promueve la degradación y transformación de sustancias contaminantes mediante una serie de reacciones fotoquímicas.</p>,
-          <p style={{ padding: '0px', fontWeight: 'bold' }}>A la fecha Photio ha demostrado capacidad para remover de forma eficiente monóxido de carbono, óxidos de nitrógeno, óxidos de azufre, metano, compuestos orgánicos volátiles, amonio, virus, bacterias y hongos. </p>,
-          <p style={{ padding: '0px', fontWeight: 'bold' }}>Observa como replicamos el proceso de fotosíntesis en el lugar de aplicación</p>
+          <p style={{ padding: '0px', marginLeft: '30px' }}>El producto al distribuirse en el lugar de aplicación y al tomar contacto con la radiación solar promueve la degradación y transformación de sustancias contaminantes mediante una serie de reacciones fotoquímicas.</p>,
+          <p style={{ padding: '0px', marginLeft: '30px', fontWeight: 'bold' }}>A la fecha Photio ha demostrado capacidad para remover de forma eficiente monóxido de carbono, óxidos de nitrógeno, óxidos de azufre, metano, compuestos orgánicos volátiles, amonio, virus, bacterias y hongos. </p>,
+          <p style={{ padding: '0px', marginLeft: '30px', fontWeight: 'bold' }}>Observa como replicamos el proceso de fotosíntesis en el lugar de aplicación</p>
         ],
         actionTitle: "Contactos"
       }
