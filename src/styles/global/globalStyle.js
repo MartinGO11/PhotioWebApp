@@ -20,7 +20,9 @@ const globalStyle = makeStyles(theme => ({
     background: colors.gray_2,
     color: colors.white,
     fontFamily: 'Poppins, sans-serif',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    padding: '0px',
+    marginBottom: '-15px'
   },
   footerComponent: {
     background: colors.blue_2,
