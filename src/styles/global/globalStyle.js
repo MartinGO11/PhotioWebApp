@@ -27,7 +27,9 @@ const globalStyle = makeStyles(theme => ({
     color: colors.white,
     fontFamily: 'Poppins, sans-serif',
     width: '100%',
-    fontSize: '12px'
+    fontSize: '12px',
+    paddingTop: '20px',
+    paddingBottom: '10px'
   },
   cardComponentDesktop: {
     marginTop: '60px',
@@ -42,17 +44,27 @@ const globalStyle = makeStyles(theme => ({
     color: colors.green_1
   },
   paragraphTitle: {
-    fontSize: '24px',
+    fontSize: '36px',
     fontWeight: 'bold'
   },
   paragraphImportant: {
     fontSize: '18px'
   },
   paragraph: {
-    fontSize: '14px'
+    fontSize: '18px'
   },
   center: {
     textAlign: 'center'
+  },
+  sliderDescription: {
+    color: 'white',
+    fontSize: '18px',
+    padding: '20px 30px 20px 30px',
+    background: 'rgba(24,70,102,0.8)',
+    position: 'absolute',
+    top: '80%',
+    left: '60%',
+    marginRight: '10vw',
   }
 }));
 

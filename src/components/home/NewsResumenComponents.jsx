@@ -1,24 +1,22 @@
 import { Grid } from '@material-ui/core'
 import React from 'react';
 import homeStyle from '../../styles/global/homeStyle';
-import globalStyle from '../../styles/global/globalStyle';
-import { default as newsEs } from './news-es.svg';
 import { NewsCardComponent } from './NewsCardComponent';
+import colors from '../../styles/global/colors';
 
 export const NewsResumenComponents = ({ newsText }) => {
 
   const homeStyles = homeStyle();
-  const globalStyles = globalStyle();
 
   return (
     <>
       <Grid container direction="row" justify="flex-start" alignItems="center" spacing={1} className={homeStyles.newsResumenComponent} >
-        <Grid item xs={1}>
-          {/* vacio */}
-        </Grid>
-        <Grid item xs={7} md={3} className={globalStyles.center}>
-          <img src={newsEs} alt="newsTitle" />
-          <p className={globalStyles.paragraphImportant}>{newsText.description}</p>
+        <Grid item xs={1} />
+        <Grid item xs={10} md={2} >
+          <p style={{color: colors.blue_1, fontSize: '48px', fontWeight: 'bold', marginBottom: '0px'}}>NOTICIAS</p>
+          <div style={{fontSize: '18px', textTransform: 'uppercase'}}>
+            {newsText.description}
+          </div>
         </Grid>
       </Grid>
 

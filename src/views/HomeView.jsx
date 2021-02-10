@@ -12,6 +12,7 @@ import { FooterComponent } from '../components/globals/FooterComponent';
 import { NavbarComponent } from '../components/globals/NavbarComponent';
 import { CarouselComponent } from '../components/globals/CarouselComponent';
 import { TitleComponent } from '../components/globals/TitleComponent';
+import { NewnessComponent } from '../components/home/NewnessComponent';
 
 export const HomeView = () => {
 
@@ -39,6 +40,9 @@ export const HomeView = () => {
       </Grid>
       <Grid item className={homeStyles.newsResumenComponent}>
         <NewsResumenComponents newsText={homeView.newsResumenComponent} />
+      </Grid>
+      <Grid item className={homeStyles.newsResumenComponent}>
+        <NewnessComponent newnessText={homeView.newnessComponent} />
       </Grid>
       <Grid item className={homeStyles.newsResumenComponent}>
         <PartnersComponent partnersContent={homeView.partnersComponent} />
