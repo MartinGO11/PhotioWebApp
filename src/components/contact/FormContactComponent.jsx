@@ -1,9 +1,24 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import { Grid, FormControl, OutlinedInput, InputLabel, Button, makeStyles, Hidden } from '@material-ui/core';
+import { Grid, FormControl, OutlinedInput, InputLabel, Button, makeStyles, Hidden, withStyles } from '@material-ui/core';
 import { sendFormValues } from '../../services/ContactService';
+import colors from '../../styles/global/colors';
+import { default as navbarItems } from '../../constants/navbarItems.json';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 const useStyles = makeStyles((theme) => ({
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
+  },
   margin: {
     margin: theme.spacing(1),
   },
@@ -24,6 +39,21 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
   }
 }));
+
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: colors.gray_6,
+    marginTop: '30px',
+    fontSize: '18px',
+    padding: '10px 15px 10px 15px',
+    backgroundColor: colors.green_2,
+    fontFamily: 'Poppins, sans-serif',
+    width: '100%',
+    '&:hover': {
+      backgroundColor: colors.green_1,
+    },
+  },
+}))(Button);
 
 export const FormContactComponent = ({ titleImage }) => {
 
@@ -47,246 +77,204 @@ export const FormContactComponent = ({ titleImage }) => {
     sendFormValues(formValues);
   }
 
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <div
+      className={clsx(classes.list, {
+        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+      })}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {navbarItems.map((item, index) => (
+          <ListItem button key={item.title}>
+            <a href={item.to} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <ListItemText primary={item.title} />
+            </a>
+            <Divider />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+
 
   return (
-    <Grid container direction="column" justify="center" alignItems="stretch" style={{ marginTop: '30px', marginBottom: '50px'}} >
-      <Grid item>
-        <Grid container direction="row" justify="flex-start" alignItems="center" >
-          <Grid item xs={2} />
-          <Grid item xs={10} style={{ textAlign: 'left', marginBottom: '30px' }} >
-            <img src={titleImage} alt="titleImageContact" />
+    <>
+      <Grid container direction="row" justify="flex-start" alignItems="center" style={{ marginTop: '30px' }} >
+        <Grid item xs={1} md={2} />
+        <Grid item xs={4} style={{ textAlign: 'left', marginBottom: '30px' }} >
+          <img src={titleImage} alt="titleImageContact" />
+        </Grid>
+        <Hidden mdUp>
+          <Grid item xs={6} style={{ textAlign: 'right' }}>
+            <>
+              <MenuIcon style={{
+                fontSize: '30px',
+                color: 'white',
+                position: 'absolute',
+                top: '5%',
+                left: '85%'
+              }}
+                onClick={toggleDrawer('right', true)}
+              />
+              <SwipeableDrawer
+                anchor={'right'}
+                open={state['right']}
+                onClose={toggleDrawer('right', false)}
+                onOpen={toggleDrawer('right', true)}
+              >
+                {list('right')}
+              </SwipeableDrawer>
+            </>
           </Grid>
+        </Hidden>
+      </Grid>
+      <Grid container direction="row" justify="center" alignItems="center" spacing={1}  >
+        <Grid item xs={10} md={4} style={{ margin: '10px 0px 10px 0px' }}>
+          <FormControl variant="outlined" style={{ width: '100%' }}>
+            <InputLabel htmlFor="outlined-adornment-amount">Nombres</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              value={formValues.name}
+              name='name'
+              onChange={handleChange}
+              labelWidth={70}
+              className={classes.input}
+              color='primary'
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={10} md={4} style={{ margin: '10px 0px 10px 0px' }}>
+          <FormControl variant="outlined" style={{ width: '100%' }} >
+            <InputLabel htmlFor="outlined-adornment-amount">Apellidos</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              value={formValues.name}
+              name='lastName'
+              onChange={handleChange}
+              labelWidth={70}
+              className={classes.input}
+              color='primary'
+            />
+          </FormControl>
         </Grid>
       </Grid>
-      <Grid item>
-        <Grid container direction="row" justify="center" alignItems="center" >
-          <Hidden smDown>
-          <Grid item xs={8} style={{ textAlign: 'center' }} >
-            <FormControl className={clsx(classes.margin, classes.textField42)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Nombres</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='name'
-                onChange={handleChange}
-                labelWidth={70}
-                className={classes.input}
-                color='primary'
 
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField42)} variant="outlined" >
-              <InputLabel htmlFor="outlined-adornment-amount">Apellidos</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='lastName'
-                onChange={handleChange}
-                labelWidth={70}
-                className={classes.input}
-                color='primary'
+      <Grid container direction="row" justify="center" alignItems="center" spacing={1}  >
+        <Grid item xs={5} md={2} style={{ margin: '10px 0px 10px 0px' }}>
+          <FormControl variant="outlined" style={{ width: '100%' }}>
+            <InputLabel htmlFor="outlined-adornment-amount">Cargo</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              value={formValues.name}
+              name='jobTitle'
+              onChange={handleChange}
+              labelWidth={50}
+              className={classes.input}
+              color='primary'
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={5} md={2} style={{ margin: '10px 0px 10px 0px' }}>
+          <FormControl variant="outlined" style={{ width: '100%' }}>
+            <InputLabel htmlFor="outlined-adornment-amount">Empresa</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              value={formValues.name}
+              name='enterprise'
+              onChange={handleChange}
+              labelWidth={70}
+              className={classes.input}
+              color='primary'
+            />
+          </FormControl>
 
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField20)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Cargo</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='jobTitle'
-                onChange={handleChange}
-                labelWidth={50}
-                className={classes.input}
-                color='primary'
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField20)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Empresa</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='enterprise'
-                onChange={handleChange}
-                labelWidth={70}
-                className={classes.input}
-                color='primary'
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField20)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Teléfono</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='phone'
-                onChange={handleChange}
-                labelWidth={60}
-                className={classes.input}
-                color='primary'
-
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField20)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">País</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='country'
-                onChange={handleChange}
-                labelWidth={40}
-                className={classes.input}
-
-                color='primary'
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField85)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Asunto</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='subject'
-                onChange={handleChange}
-                labelWidth={60}
-                className={classes.input}
-                color='primary'
-
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField85)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">¿En que te ayudamos?</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='message'
-                onChange={handleChange}
-                labelWidth={200}
-                className={classes.input}
-                multiline
-                rows={6}
-                color='primary'
-
-              />
-            </FormControl>
-          </Grid>
-          </Hidden>
-          <Hidden mdUp>
-          <Grid item xs={10} style={{ textAlign: 'center' }} >
-            <FormControl className={classes.margin} fullWidth variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Nombres</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='name'
-                onChange={handleChange}
-                labelWidth={70}
-                className={classes.input}
-                color='primary'
-
-              />
-            </FormControl>
-            <FormControl className={classes.margin} fullWidth variant="outlined" >
-              <InputLabel htmlFor="outlined-adornment-amount">Apellidos</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='lastName'
-                onChange={handleChange}
-                labelWidth={70}
-                className={classes.input}
-                color='primary'
-
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField24)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Cargo</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='jobTitle'
-                onChange={handleChange}
-                labelWidth={50}
-                className={classes.input}
-                color='primary'
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField24)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Empresa</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='enterprise'
-                onChange={handleChange}
-                labelWidth={70}
-                className={classes.input}
-                color='primary'
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField24)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Teléfono</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='phone'
-                onChange={handleChange}
-                labelWidth={60}
-                className={classes.input}
-                color='primary'
-
-              />
-            </FormControl>
-            <FormControl className={clsx(classes.margin, classes.textField24)} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">País</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='country'
-                onChange={handleChange}
-                labelWidth={40}
-                className={classes.input}
-
-                color='primary'
-              />
-            </FormControl>
-            <FormControl className={classes.margin} fullWidth variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">Asunto</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='subject'
-                onChange={handleChange}
-                labelWidth={60}
-                className={classes.input}
-                color='primary'
-
-              />
-            </FormControl>
-            <FormControl className={classes.margin} fullWidth variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-amount">¿En que te ayudamos?</InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-amount"
-                value={formValues.name}
-                name='message'
-                onChange={handleChange}
-                labelWidth={200}
-                className={classes.input}
-                multiline
-                rows={6}
-                color='primary'
-
-              />
-            </FormControl>
-          </Grid>
-          </Hidden>
+        </Grid>
+        <Grid item xs={5} md={2} style={{ margin: '10px 0px 10px 0px' }}>
+          <FormControl variant="outlined" style={{ width: '100%' }}>
+            <InputLabel htmlFor="outlined-adornment-amount">Teléfono</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              value={formValues.name}
+              name='phone'
+              onChange={handleChange}
+              labelWidth={60}
+              className={classes.input}
+              color='primary'
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={5} md={2} style={{ margin: '10px 0px 10px 0px' }}>
+          <FormControl variant="outlined" style={{ width: '100%' }}>
+            <InputLabel htmlFor="outlined-adornment-amount">País</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              value={formValues.name}
+              name='country'
+              onChange={handleChange}
+              labelWidth={40}
+              className={classes.input}
+              color='primary'
+            />
+          </FormControl>
         </Grid>
       </Grid>
-      <Grid item>
-        <Grid container direction="row" justify="center" alignItems="center" >
-          <Grid item xs={2}>
-            <Button variant="contained" onClick={sendForm} style={{width: '100%', background: 'green', color: 'white'}}>
-              Enviar
-            </Button>
-          </Grid>
+      <Grid container direction="row" justify="space-evenly" alignItems="center" spacing={1}  >
+        <Grid item xs={10} md={8} style={{ margin: '10px 0px 10px 0px' }}>
+          <FormControl style={{ width: '100%' }} variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-amount">Asunto</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              value={formValues.name}
+              name='subject'
+              onChange={handleChange}
+              labelWidth={60}
+              className={classes.input}
+              color='primary'
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={10} md={8} style={{ margin: '10px 0px 10px 0px' }}>
+          <FormControl style={{ width: '100%' }} variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-amount">¿En que te ayudamos?</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              value={formValues.name}
+              name='message'
+              onChange={handleChange}
+              labelWidth={200}
+              className={classes.input}
+              multiline
+              rows={6}
+              color='primary'
+            />
+          </FormControl>
         </Grid>
       </Grid>
-    </Grid>
+      <Grid container direction="row" justify="center" alignItems="center" >
+        <Grid item xs={6} md={3}>
+          <ColorButton variant="contained" onClick={sendForm}>
+            Enviar
+            </ColorButton>
+        </Grid>
+      </Grid>
+    </>
   )
 }
