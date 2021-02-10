@@ -3,8 +3,8 @@ import { languageOptions, dictionaryList } from '../languages/index';
 
 
 export const LanguageContext = createContext({
-  userLanguage: 'es',
-  dictionary: dictionaryList.es
+  userLanguage: 'items',
+  dictionary: dictionaryList.items
 });
 
 // it provides the language context to app
