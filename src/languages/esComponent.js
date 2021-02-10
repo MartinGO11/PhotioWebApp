@@ -3,6 +3,14 @@ import client2Image from '../components/home/client2.png';
 import partner1Image from '../components/home/partner1.png';
 import partner2Image from '../components/home/partner2.png';
 import partner3Image from '../components/home/partner3.png';
+import partner4Image from '../components/home/partner4.png';
+import partner5Image from '../components/home/partner5.png';
+import partner6Image from '../components/home/partner6.png';
+import partner7Image from '../components/home/partner7.png';
+import partner8Image from '../components/home/partner8.png';
+import partner9Image from '../components/home/partner9.png';
+import partner10Image from '../components/home/partner10.png';
+import partner11Image from '../components/home/partner11.png';
 import agricultureIcon from '../components/applications/agricultureIcon.svg';
 import buildIcon from '../components/applications/buildIcon.svg';
 import carIcon from '../components/applications/carIcon.svg';
@@ -84,7 +92,15 @@ export const items = {
         images: [
           partner1Image,
           partner2Image,
-          partner3Image
+          partner3Image,
+          partner4Image,
+          partner5Image,
+          partner6Image,
+          partner7Image,
+          partner8Image,
+          partner9Image,
+          partner10Image,
+          partner11Image
         ]
       }
     }
