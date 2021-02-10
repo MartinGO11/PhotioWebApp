@@ -9,12 +9,13 @@ import { ApplicationsView } from "./views/ApplicationsView";
 import { AboutView } from './views/AboutView';
 import { BuyView } from "./views/BuyView";
 import { ContactView } from "./views/ContactView";
+import { WhatsIsView } from "./views/WhatsIsView";
 
 export default function AppRouter() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={ HomeView } />
+        <Route exact path="/whatsIs" component={ WhatsIsView } />
         <Route exact path="/applications" component={ ApplicationsView } />
         <Route exact path="/about" component={ AboutView } />
         <Route exact path="/buy" component={ BuyView } />
