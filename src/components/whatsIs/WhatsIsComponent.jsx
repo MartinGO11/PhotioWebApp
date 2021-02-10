@@ -10,13 +10,13 @@ export const WhatsIsComponent = ({ whatIsContent }) => {
   return (
     <>
       <Hidden smDown>
-        <Grid container direction="column" justify="center" alignItems="center" style={{ marginTop: '30px', fontFamily: 'Lato, sans-serif' }} >
+        {/* <Grid container direction="row" justify="center" alignItems="center" style={{ marginTop: '30px', fontFamily: 'Lato, sans-serif' }} > */}
           {
             whatIsContent.map((content, index) => {
               return (
-                <Grid item key={`Photio-WhatIs-${index}`}>
+                <div key={`Photio-WhatIs-${index}`}>
                   <Grid container direction="row" justify="flex-start" alignItems="center" style={{ borderLeft: `solid  30px ${index % 2 === 0 ? colors.blue_1 : colors.green_1}`, marginBottom: '30px' }} >
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} style={{textAlign: 'center'}}>
                       <img src={content.img} alt={`Photio-WhatsIs-${index}`} style={{ maxWidth: '100%' }} />
                     </Grid>
                     <Grid item xs={10} md={4}>
@@ -31,11 +31,11 @@ export const WhatsIsComponent = ({ whatIsContent }) => {
                       }
                     </Grid>
                   </Grid>
-                </Grid>
+                </div>
               )
             })
           }
-        </Grid>
+        {/* </Grid> */}
       </Hidden>
 
       <Hidden mdUp>
@@ -44,9 +44,9 @@ export const WhatsIsComponent = ({ whatIsContent }) => {
             whatIsContent.map((content, index) => {
               return (
                 <Grid item key={`Photio-WhatIs-${index}`}>
-                  <Grid container direction="row" justify="flex-start" alignItems="center" style={{ borderLeft: `solid  30px ${index % 2 === 0 ? colors.blue_1 : colors.green_1}`, marginBottom: '30px', paddingLeft: '20px' }} >
+                  <Grid container direction="row" justify="flex-start" alignItems="center" style={{ borderLeft: `solid  15px ${index % 2 === 0 ? colors.blue_1 : colors.green_1}`, marginBottom: '30px' }} >
                     <Grid item xs={12} md={6}>
-                      <img src={content.img} alt={`Photio-WhatsIs-${index}`} style={{ maxWidth: '100%' }} />
+                      <img src={content.img} alt={`Photio-WhatsIs-${index}`} style={{ maxWidth: '90%', marginLeft: '20px' }} />
                     </Grid>
                     <Grid item xs={10} md={4}>
                       {

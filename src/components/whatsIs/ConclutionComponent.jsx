@@ -13,7 +13,9 @@ export const ConclutionComponent = ({ conclutionContent }) => {
           <Grid item xs={8} md={10} style={{ fontSize: '32px', fontWeight: 'bold', textAlign: 'center', color: colors.green_1 }}>
             {conclutionContent.title}
           </Grid>
-          <Grid item xs={8} md={3} style={{ fontSize: '36px' }}>
+        </Grid>
+        <Grid container direction="row" justify="space-evenly" alignItems="center" style={{ fontFamily: 'Lato, sans-serif' }} >
+          <Grid item xs={8} md={3} style={{ fontSize: '36px', color: colors.blue_1 }}>
             {conclutionContent.certification.text}
           </Grid>
           <Grid item xs={1} />
@@ -34,15 +36,16 @@ export const ConclutionComponent = ({ conclutionContent }) => {
           <Grid item xs={8} md={10} style={{ fontSize: '18px', fontWeight: 'bold', textAlign: 'center', color: colors.green_1 }}>
             {conclutionContent.title}
           </Grid>
-          <Grid item xs={10} md={3} style={{ fontSize: '18px', textAlign: 'center' }}>
+        </Grid>
+        <Grid container direction="row" justify="space-evenly" alignItems="center" style={{ fontFamily: 'Lato, sans-serif', paddingBottom: '20px' }} >
+          <Grid item xs={10} md={3} style={{ fontSize: '18px', textAlign: 'left', color: colors.blue_1 }}>
             {conclutionContent.certification.text}
           </Grid>
-          <Grid item xs={0} md={1} />
-          <Grid item xs={4} md={2}>
-            <img src={conclutionContent.certification.icon1} alt="Photio-Certification-UCH" style={{maxWidth: '100%'}} />
+          <Grid item xs={3} md={2}>
+            <img src={conclutionContent.certification.icon1} alt="Photio-Certification-UCH" style={{ maxWidth: '100%', height: '80px', textAlign: 'center' }} />
           </Grid>
-          <Grid item xs={4} md={2}>
-            <img src={conclutionContent.certification.icon2} alt="Photio-Certification-UC" style={{maxWidth: '100%'}} />
+          <Grid item xs={3} md={2}>
+            <img src={conclutionContent.certification.icon2} alt="Photio-Certification-UC" style={{ maxWidth: '100%', height: '80px', textAlign: 'center' }} />
           </Grid>
         </Grid>
       </Hidden>
