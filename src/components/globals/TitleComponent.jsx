@@ -4,6 +4,8 @@ import globalStyle from '../../styles/global/globalStyle';
 import colors from '../../styles/global/colors';
 // import { ColorButton } from '../../styles/customStyles/ColorButton';
 import { default as openKey } from '../home/openKey.svg';
+import { NavLink } from 'react-router-dom';
+
 
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -47,11 +49,17 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
           <Grid item md={3} className={globalStyles.fontPoppins} style={{ textAlign: 'center' }}>
             <p className={globalStyles.paragraphTitle} style={{ color: colors.blue_1, fontWeight: 'bold', marginBottom: '0px' }}>{titleContent.titleAction}</p>
             <p className={globalStyles.paragraph} style={{ marginLeft: '50px', marginRight: '50px', marginTop: '0px', marginBottom: '9px' }}>{titleContent.descriptionAction}</p>
-            <a href="/talk" style={{textDecoration: 'none'}}>
+            <NavLink
+              activeClassName="active"
+              className="nav-item nav-link"
+              exact
+              to="/talk"
+              style={{ textDecoration: 'none' }}
+            >
               <ColorButton variant="contained" style={{ marginBottom: '30px' }}>
                 <p style={{ margin: '0px' }}>{titleContent.textButtonAction}</p>
               </ColorButton>
-            </a>
+            </NavLink>
           </Grid>
         </Grid>
       </Hidden>
@@ -81,13 +89,19 @@ export const TitleComponent = ({ titleContent, titleImage, showAction = false })
             <p style={{ fontSize: '14px', marginTop: '0px', color: 'white' }}>{titleContent.descriptionAction}</p>
           </Grid>
           <Grid item xs={4}>
-            <a href="/talk" style={{textDecoration: 'none'}}>
+            <NavLink
+              activeClassName="active"
+              className="nav-item nav-link"
+              exact
+              to="/talk"
+              style={{ textDecoration: 'none' }}
+            >
               <ColorButton variant="contained">
                 <p style={{ fontSize: '14px', margin: '0px' }}>
                   {titleContent.textButtonAction}
                 </p>
               </ColorButton>
-            </a>
+            </NavLink>
           </Grid>
         </Grid>
       </Hidden>

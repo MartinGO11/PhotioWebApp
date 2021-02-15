@@ -5,6 +5,7 @@ import globalStyle from '../../styles/global/globalStyle';
 // import { ColorButton } from '../../styles/customStyles/ColorButton';
 import { default as buyIcon } from './buyIcon.png';
 import { default as serviceIcon } from './serviceIcon.png';
+import { NavLink } from 'react-router-dom';
 
 const icons = [serviceIcon, buyIcon];
 
@@ -49,11 +50,18 @@ export const BuyItemComponent = ({ buyContent }) => {
                   <img src={icons[index]} alt={`Photio-service-${index}`} />
                   <h1 style={{ fontSize: '24px' }}>{item.title}</h1>
                   <p style={{ fontSize: '18px' }}>{item.description}</p>
-                  <a href={item.to} style={{textDecoration: 'none'}}>
+                  <NavLink
+                    key={`navbarItem-${index}`}
+                    activeClassName="active"
+                    className="nav-item nav-link"
+                    exact
+                    to={item.to}
+                    style={{textDecoration: 'none'}}
+                  >
                     <ColorButtonDesktop>
                       {item.actionTitle}
                     </ColorButtonDesktop>
-                  </a>
+                  </NavLink>
                 </Grid>
               )
             })
@@ -72,9 +80,18 @@ export const BuyItemComponent = ({ buyContent }) => {
                   <Grid item xs={6} style={{ color: colors.blue_1 }} className={globalStyles.fontLato}>
                     <h1 style={{ fontSize: '18px' }}>{item.title}</h1>
                     <p style={{ fontSize: '12px' }}>{item.description}</p>
-                    <a href={item.to} style={{textDecoration: 'none'}}>
-                      <ColorButtonMobile>{item.actionTitle}</ColorButtonMobile>
-                    </a>
+                    <NavLink
+                      key={`navbarItem-${index}`}
+                      activeClassName="active"
+                      className="nav-item nav-link"
+                      exact
+                      to={item.to}
+                      style={{textDecoration: 'none'}}
+                    >
+                      <ColorButtonDesktop>
+                        {item.actionTitle}
+                      </ColorButtonDesktop>
+                    </NavLink>
                   </Grid>
                 </Grid>
               )

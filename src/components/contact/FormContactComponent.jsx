@@ -10,7 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
-
+import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -104,9 +104,16 @@ export const FormContactComponent = ({ titleImage }) => {
       <List>
         {navbarItems.map((item, index) => (
           <ListItem button key={item.title}>
-            <a href={item.to} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <NavLink
+              key={`navbarItem-${index}`}
+              activeClassName="active"
+              className="nav-item nav-link"
+              exact
+              to={item.to}
+              style={{ textDecoration: 'none' }}
+            >
               <ListItemText primary={item.title} />
-            </a>
+            </NavLink>
             <Divider />
           </ListItem>
         ))}

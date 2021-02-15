@@ -10,6 +10,8 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { NavLink } from 'react-router-dom';
+
 
 const useStyles = makeStyles({
   list: {
@@ -50,9 +52,15 @@ export const CarouselComponent = ({ carouselContent }) => {
       <List>
         {navbarItems.map((item, index) => (
           <ListItem button key={item.title}>
-            <a href={item.to} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <ListItemText primary={item.title} />
-            </a>
+            <NavLink
+              key={`navbarItem-${index}`}
+              activeClassName="active"
+              className="nav-item nav-link"
+              exact
+              to={item.to}
+            >
+              {item.title}
+            </NavLink>
             <Divider />
           </ListItem>
         ))}
@@ -74,7 +82,13 @@ export const CarouselComponent = ({ carouselContent }) => {
           height: '93vh',
         }}>
           <Hidden smDown>
-            <a href='/'>
+            <NavLink
+              activeClassName="active"
+              className="nav-item nav-link"
+              exact
+              to="/"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
               <img
                 src={logoPhotio}
                 alt="Photio-Logo"
@@ -87,7 +101,7 @@ export const CarouselComponent = ({ carouselContent }) => {
                   maxWidth: '8%'
                 }}
               />
-            </a>
+            </NavLink>
             <p style={{
               color: 'white',
               fontSize: '18px',
@@ -103,7 +117,13 @@ export const CarouselComponent = ({ carouselContent }) => {
             </p>
           </Hidden>
           <Hidden mdUp>
-            <a href="/">
+            <NavLink
+              activeClassName="active"
+              className="nav-item nav-link"
+              exact
+              to="/"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
               <img
                 src={logoPhotio}
                 alt="Photio-Logo"
@@ -116,7 +136,7 @@ export const CarouselComponent = ({ carouselContent }) => {
                   maxWidth: '20%'
                 }}
               />
-            </a>
+            </NavLink>
             <>
               <MenuIcon style={{
                 fontSize: '30px',
@@ -143,7 +163,7 @@ export const CarouselComponent = ({ carouselContent }) => {
               padding: '20px 30px 20px 30px',
               background: 'rgba(24,70,102,0.8)',
               position: 'absolute',
-              top: '65%',
+              top: '60%',
               left: '30%',
               // marginRight: '10vw',
               textAlign: 'left'
@@ -153,7 +173,7 @@ export const CarouselComponent = ({ carouselContent }) => {
           </Hidden>
 
         </div>
-      </Grid>
-    </Grid>
+      </Grid >
+    </Grid >
   )
 }
