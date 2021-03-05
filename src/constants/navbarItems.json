@@ -1,26 +1,28 @@
-[   
-    {
+[
+  {
     "title": "Inicio",
     "to": "/"
-    },
-    {
-        "title": "¿Qué es Photio?",
-        "to": "/whatsIs"
-    },
-    {
-        "title": "Aplicaciones",
-        "to": "/applications"
-    },
-    {
-        "title": "Nosotros",
-        "to": "/about"
-    },
-    {
-        "title": "Ventas",
-        "to": "/buy"
-    },
-    {
-        "title": "Contáctanos",
-        "to": "/contact"
-    }
+  },
+  {
+    "title": "¿Qué es Photio?",
+    "to": "/whatsIs"
+  },
+  {
+    "title": "Aplicaciones",
+    "to": "/applications",
+    "options": [
+      "Construcción",
+      "Transporte y Vialidad",
+      "Agricultura",
+      "Minería"
+    ]
+  },
+  {
+    "title": "Nosotros",
+    "to": "/about"
+  },
+  {
+    "title": "Contáctanos",
+    "to": "/contact"
+  }
 ]

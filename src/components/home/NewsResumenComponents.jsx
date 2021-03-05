@@ -27,16 +27,15 @@ export const NewsResumenComponents = ({ newsText }) => {
         </SwiperSlide>
       )
     });
-    console.log(slidesNews);
   }
 
   return (
     <>
       <Grid container direction="row" justify="flex-start" alignItems="center" className={homeStyles.newsResumenComponent} >
         <Grid item xs={1} />
-        <Grid item xs={10} md={2} >
-          <p style={{ color: colors.blue_1, fontSize: '48px', fontWeight: 'bold', marginBottom: '0px' }}>NOTICIAS</p>
-          <div style={{ fontSize: '18px', textTransform: 'uppercase' }}>
+        <Grid item xs={10} md={3} >
+          <p style={{ color: colors.blue_1, fontSize: '48px', fontWeight: 'bold', marginBottom: '0px', marginTop: '0px' }}>NOTICIAS</p>
+          <div style={{ fontSize: '18px', textTransform: 'uppercase', width: '80%' }}>
             {newsText.description}
           </div>
         </Grid>

@@ -1,6 +1,5 @@
-import { Paper, Grid, Hidden } from '@material-ui/core';
 import React from 'react';
-import useStyles from '../../styles/global/homeStyle';
+import { Paper, Grid, Hidden } from '@material-ui/core';
 import colors from '../../styles/global/colors';
 import Image from './test1.png';
 
@@ -16,11 +15,11 @@ export const NewsCardComponent = ({ newsContent }) => {
       backgroundSize: 'cover',
       minHeight: '300px',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      width: '94%',
+      marginLeft: '3%'
     }
   };
-
-  const classesStyle = useStyles();
 
   const dateArray = newsContent.date.split('-');
 

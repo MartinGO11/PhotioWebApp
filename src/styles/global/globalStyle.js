@@ -17,12 +17,13 @@ const globalStyle = makeStyles(theme => ({
     color: colors.blue_1
   },
   navbarComponent: {
-    background: colors.gray_2,
+    background: colors.blue_1,
     color: colors.white,
     fontFamily: 'Poppins, sans-serif',
     fontWeight: 'bold',
     padding: '0px',
-    marginBottom: '-15px'
+    // marginBottom: '-15px',
+    maxHeight: '10vh'
   },
   footerComponent: {
     background: colors.blue_2,
@@ -31,7 +32,7 @@ const globalStyle = makeStyles(theme => ({
     width: '100%',
     fontSize: '12px',
     paddingTop: '20px',
-    paddingBottom: '10px'
+    paddingBottom: '10px',
   },
   cardComponentDesktop: {
     marginTop: '60px',
@@ -39,15 +40,15 @@ const globalStyle = makeStyles(theme => ({
   },
   cardComponentTextDesktop: {
     marginLeft: '35px',
-    paddingTop: '50px',
+    paddingTop: '10px',
     fontFamily: 'Lato, sans-serif',
   },
   newsResumenComponent: {
     color: colors.green_1
   },
   paragraphTitle: {
-    fontSize: '36px',
-    fontWeight: 'bold'
+    fontSize: '28px',
+    fontWeight: '900'
   },
   paragraphImportant: {
     fontSize: '18px'

@@ -9,7 +9,7 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+// import ListItemText from '@material-ui/core/ListItemText';
 import { NavLink } from 'react-router-dom';
 
 
@@ -23,6 +23,7 @@ const useStyles = makeStyles({
 });
 
 export const CarouselComponent = ({ carouselContent }) => {
+
 
   const classes = useStyles();
   const [state, setState] = React.useState({
@@ -77,9 +78,9 @@ export const CarouselComponent = ({ carouselContent }) => {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          // backgroundImage: `url(${sliderContent.background})`,
-          background: 'black',
-          height: '93vh',
+          backgroundImage: `url(${carouselContent[0].background})`,
+          // background: 'black',
+          height: '90vh',
         }}>
           <Hidden smDown>
             <NavLink
@@ -104,14 +105,14 @@ export const CarouselComponent = ({ carouselContent }) => {
             </NavLink>
             <p style={{
               color: 'white',
-              fontSize: '18px',
-              padding: '40px 30px 40px 30px',
+              fontSize: '16px',
+              padding: '40px 2vw 40px 30px',
               background: 'rgba(24,70,102,0.8)',
               position: 'absolute',
-              top: '65%',
-              left: '60%',
-              paddingRight: '10vw',
-              textAlign: 'left'
+              top: '60vh',
+              left: '50%',
+              textAlign: 'left',
+              width: '50%'
             }}>
               {carouselContent[0].description}
             </p>
@@ -163,8 +164,8 @@ export const CarouselComponent = ({ carouselContent }) => {
               padding: '20px 30px 20px 30px',
               background: 'rgba(24,70,102,0.8)',
               position: 'absolute',
-              top: '60%',
-              left: '30%',
+              top: '50%',
+              left: '20%',
               // marginRight: '10vw',
               textAlign: 'left'
             }}>

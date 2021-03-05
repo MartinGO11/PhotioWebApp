@@ -9,7 +9,7 @@ const homeStyle = makeStyles(theme => ({
     paddingBottom: '25px'
   },
   odsComponent: {
-    background: colors.gray,
+    background: 'rgba(224, 224, 224, 0.7)',
     color: colors.blue_1,
     paddingTop: '25px',
     paddingBottom: '25px'

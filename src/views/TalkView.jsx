@@ -13,7 +13,7 @@ export const TalkView = ({ contactContent }) => {
   const globalStyles = globalStyle();
 
   const { dictionary } = useContext(LanguageContext);
-  const { contactView, footerView } = dictionary;
+  const { footerView } = dictionary;
 
 
   return (

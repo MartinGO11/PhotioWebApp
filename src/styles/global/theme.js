@@ -12,9 +12,9 @@ const theme = createMuiTheme({
     // error: {
     //   main: colors.red_critical,
     // },
-    // background: {
-    //   default: colors.background_light,
-    // },
+    background: {
+     default: colors.white,
+    },
   },
   typography: {
     h1: {

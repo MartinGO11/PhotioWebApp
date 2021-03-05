@@ -11,7 +11,7 @@ export const IndicatorComponents = ({ indicatorText }) => {
   return (
     <>
     <Hidden smDown>
-      <Grid container direction="row" justify="space-evenly" alignItems="center" style={{paddingTop: '30px'}}  >
+      <Grid container direction="row" justify="space-evenly" alignItems="flex-start" style={{paddingTop: '30px'}}  >
         <Grid item xs={1} />
         <Grid item xs={4} md={2} className={globalStyles.fontLato} >
           <img src={paintRoll} alt="paintRoll" />
