@@ -36,6 +36,8 @@ import miningIcon from "../components/applications/miningIcon.svg";
 import backgroundAbout from "../components/about/backgroundCarousel.png";
 import backgroundAboutUs from "../components/about/backgroundAboutAboutUs.png";
 import backgroundWhatDoWeDo from "../components/about/backgroundAboutWahtDoWeDo.png";
+import aboutIcon from "../components/about/aboutUsIcon.svg";
+import whatDoWeDoIcon from "../components/about/whatDoWeDoIcon.svg";
 
 // BuyView
 import backgroundContact from "../components/contact/backgroundCarousel.png";
@@ -363,6 +365,7 @@ export const items = {
       {
         title: <span style={{ marginLeft: "20px" }}>QUIENES SOMOS</span>,
         img: backgroundAboutUs,
+        icon: aboutIcon,
         description: [
           <p style={{ margin: "0px", padding: "0px" }}>
             Profesionales conscientes del impacto social y medioambiental que
@@ -388,6 +391,7 @@ export const items = {
       {
         title: <span style={{ marginLeft: "20px" }}>QUE HACEMOS</span>,
         img: backgroundWhatDoWeDo,
+        icon: whatDoWeDoIcon,
         description: [
           <p style={{ margin: "0px", padding: "0px" }}>
             Utilizando nanotecnología, química de superficies y herramientas de

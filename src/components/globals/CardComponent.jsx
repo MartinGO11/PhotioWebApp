@@ -38,13 +38,11 @@ export const CardComponent = ({ cardContent, color, benefits = false }) => {
               alignItems: "center",
             }}
           >
-            {benefits && (
-              <img
-                src={cardContent.icon}
-                alt={`Photio-Application-Icon-${cardContent.title}`}
-                style={{ marginRight: "30px" }}
-              />
-            )}
+            <img
+              src={cardContent.icon}
+              alt={`Photio-Application-Icon-${cardContent.title}`}
+              style={{ marginRight: "30px" }}
+            />
             {cardContent.title}
           </h1>
           <div style={benefits ? { borderLeft: `solid 8px ${color}` } : {}}>
@@ -110,13 +108,11 @@ export const CardComponent = ({ cardContent, color, benefits = false }) => {
           }}
         >
           <h1 style={{ fontSize: "24px" }}>
-            {benefits && (
-              <img
-                src={cardContent.icon}
-                alt={`Photio-Application-Icon-${cardContent.title}`}
-                style={{ marginRight: "20px", maxHeight: "30px" }}
-              />
-            )}
+            <img
+              src={cardContent.icon}
+              alt={`Photio-Application-Icon-${cardContent.title}`}
+              style={{ marginRight: "20px", maxHeight: "30px" }}
+            />
             {cardContent.title}
           </h1>
         </Grid>
