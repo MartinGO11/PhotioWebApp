@@ -77,6 +77,7 @@ export const NavbarComponent = () => {
                           }}
                           onClose={handlePopoverClose}
                           disableRestoreFocus
+                          disableScrollLock
                         >
                           {
                             item.options.map(option => <p>{option}</p>)

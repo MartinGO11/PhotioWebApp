@@ -29,7 +29,6 @@ const globalStyle = makeStyles(theme => ({
     background: colors.blue_2,
     color: colors.white,
     fontFamily: 'Poppins, sans-serif',
-    width: '100%',
     fontSize: '12px',
     paddingTop: '20px',
     paddingBottom: '10px',
