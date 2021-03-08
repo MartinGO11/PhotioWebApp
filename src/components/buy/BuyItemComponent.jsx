@@ -3,8 +3,8 @@ import { Grid, Hidden } from "@material-ui/core";
 import colors from "../../styles/global/colors";
 import globalStyle from "../../styles/global/globalStyle";
 // import { ColorButton } from '../../styles/customStyles/ColorButton';
-import { default as buyIcon } from "./buyIcon.jpg";
-import { default as serviceIcon } from "./serviceIcon.jpg";
+import { default as buyIcon } from "./buyIcon.png";
+import { default as serviceIcon } from "./serviceIcon.png";
 // import { NavLink } from "react-router-dom";
 
 const icons = [serviceIcon, buyIcon];
