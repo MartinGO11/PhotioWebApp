@@ -105,13 +105,13 @@ export const BuyItemComponent = ({ buyContent }) => {
                 container
                 direction="row"
                 justify="center"
-                alignItems="center"
+                alignItems="flex-start"
               >
                 <Grid item xs={3}>
                   <img
                     src={icons[index]}
                     alt={`Photio-service-${index}`}
-                    style={{ textAlign: "center" }}
+                    style={{ textAlign: "center", maxWidth: '70%' }}
                   />
                 </Grid>
                 <Grid
