@@ -28,7 +28,7 @@ export const NavbarComponent = () => {
 
   return (
     <>
-      <Hidden mdDown>
+      <Hidden smDown>
         <Grid container direction="row" justify="center" alignItems="center">
           <Grid item md={10}>
             <p
