@@ -65,7 +65,7 @@ export const BuyItemComponent = ({ buyContent }) => {
                 <img
                   src={icons[index]}
                   alt={`Photio-service-${index}`}
-                  style={{ maxWidth: "40%", textAlign: "center" }}
+                  style={{ maxWidth: "25%", textAlign: "center" }}
                 />
                 <h1 style={{ fontSize: "24px" }}>{item.title}</h1>
                 <p style={{ fontSize: "18px" }}>{item.description}</p>
@@ -111,7 +111,7 @@ export const BuyItemComponent = ({ buyContent }) => {
                   <img
                     src={icons[index]}
                     alt={`Photio-service-${index}`}
-                    style={{ textAlign: "center", maxWidth: '70%' }}
+                    style={{ textAlign: "center", maxWidth: '50%', marginTop: '20px' }}
                   />
                 </Grid>
                 <Grid
