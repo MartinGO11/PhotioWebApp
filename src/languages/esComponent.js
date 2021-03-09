@@ -19,7 +19,7 @@ import partner12Image from "../components/home/partnersLogos/nestle.png";
 import partner13Image from "../components/home/partnersLogos/OpenBeaucheff.png";
 import partner14Image from "../components/home/partnersLogos/Riverside.png";
 import partner15Image from "../components/home/partnersLogos/smartaraucania.png";
-// import partner16Image from "../components/home/partnersLogos/zerodust.png";
+import partner16Image from "../components/home/partnersLogos/zerodust.png";
 
 // ApplicationsView
 import backgroundApplications from "../components/applications/backgroundCarousel.png";
@@ -38,6 +38,7 @@ import backgroundAboutUs from "../components/about/backgroundAboutAboutUs.png";
 import backgroundWhatDoWeDo from "../components/about/backgroundAboutWahtDoWeDo.png";
 import aboutIcon from "../components/about/aboutUsIcon.svg";
 import whatDoWeDoIcon from "../components/about/whatDoWeDoIcon.svg";
+import road from "../components/about/road.png";
 
 // BuyView
 import backgroundContact from "../components/contact/backgroundCarousel.png";
@@ -151,6 +152,7 @@ export const items = {
           origin: "por Fractal",
           description:
             "El proyecto desarrollado por la empresa Fractal toma como inspiraciónel proceso de fotosíntesis de las plantas",
+          url: 'http://....'
         },
         {
           id: 2,
@@ -415,6 +417,39 @@ export const items = {
         ],
       },
     ],
+    road: {
+      image: road
+    },
+    recognitions: [
+      {
+        logo: partner11Image,
+        description: ['1° Lugar $100K Latam','MIT Argentina 2019']
+      },
+      {
+        logo: partner5Image,
+        description: ['Premio Felipe Álvarez','Universidad de Chile 2020']
+      },
+      {
+        logo: partner9Image,
+        description: ['Ganadores Programa Ignition','Know Hub 2020']
+      },
+      {
+        logo: partner12Image,
+        description: ['Premio Henri Nestlé','Chile 2020']
+      },
+      {
+        logo: partner10Image,
+        description: ['Ganadores Concurso Comunal de Innovación','Municipalidad de Las Condes 2020']
+      },
+      {
+        logo: partner13Image,
+        description: ['500 mejores proyectos','Premios Latinoamérica Verde 2020']
+      },
+      {
+        logo: partner16Image,
+        description: ['Finalistas Desafío Zero Dust Spence BHP','Expande Minería 2020']
+      }
+    ]
   },
   buyView: {
     carouselContent: [
@@ -422,7 +457,7 @@ export const items = {
         background: backgroundContact,
         description: (
           <p style={{ margin: "0px", padding: "0px" }}>
-            NOS AJUSTAMOS A LOS REQUERIMIENTOS DE TODAS
+            NOS AJUSTAMOS A LOS REQUERIMIENTOS DE TODAS {" "}
             <strong>TUS IDEAS O PROYECTOS</strong>
           </p>
         ),
@@ -442,7 +477,7 @@ export const items = {
     },
     buyItems: [
       {
-        title: "SERVICIO DE ASESORÍA Y CONSULTORIA",
+        title: <p>SERVICIO DE ASESORÍA <br /> Y CONSULTORIA</p>,
         img: serviceLogo,
         to: "/talk",
         description: [
@@ -455,7 +490,7 @@ export const items = {
         actionTitle: "Conversemos",
       },
       {
-        title: "VENTA DE ADITIVO",
+        title: <p>VENTA DE <br /> ADITIVO</p>,
         img: buyLogo,
         to: "/contact",
         description: [
