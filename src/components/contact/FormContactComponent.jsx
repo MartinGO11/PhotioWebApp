@@ -20,6 +20,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import { NavLink } from "react-router-dom";
+import globalStyle from "../../styles/global/globalStyle";
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -66,6 +67,7 @@ const ColorButton = withStyles((theme) => ({
 
 export const FormContactComponent = ({ titleImage }) => {
   const classes = useStyles();
+  const globalStyles = globalStyle();
   const [formValues, setFormValues] = useState({
     name: "",
     //lastName: "",
@@ -144,8 +146,8 @@ export const FormContactComponent = ({ titleImage }) => {
         style={{ marginTop: "30px" }}
       >
         <Grid item xs={1} md={2} />
-        <Grid item xs={4} style={{ textAlign: "left", marginBottom: "30px" }}>
-          <img src={titleImage} alt="titleImageContact" />
+        <Grid item xs={5} style={{ textAlign: "left", marginBottom: "30px" }}>
+          <h1 className={globalStyles.fontLato} style={{color: 'white', fontWeight: '900', fontSize: '48px'}}>CONTACTO</h1>
         </Grid>
         <Hidden mdUp>
           <Grid item xs={6} style={{ textAlign: "right" }}>
@@ -220,7 +222,7 @@ export const FormContactComponent = ({ titleImage }) => {
               labelWidth={60}
               className={classes.input}
               color="primary"
-              type='number'
+              type="number"
             />
           </FormControl>
         </Grid>
@@ -348,7 +350,7 @@ export const FormContactComponent = ({ titleImage }) => {
       
       
       */}
-      
+
       {/*
       
 
@@ -395,8 +397,6 @@ export const FormContactComponent = ({ titleImage }) => {
       
       
       */}
-
-
 
       <Grid container direction="row" justify="center" alignItems="center">
         <Grid item xs={10} md={6}>
