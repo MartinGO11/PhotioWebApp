@@ -220,17 +220,10 @@ export const items = {
         title: "SOCIOS ESTRATÉGICOS",
         images: [
           partner1Image,
-          partner2Image,
           partner3Image,
           partner4Image,
-          partner5Image,
-          partner6Image,
           partner7Image,
           partner8Image,
-          partner9Image,
-          partner10Image,
-          partner11Image,
-          partner12Image,
           partner13Image,
           partner14Image,
           partner15Image,
@@ -486,6 +479,13 @@ export const items = {
         description: [
           "500 mejores proyectos",
           "Premios Latinoamérica Verde 2020",
+        ],
+      },
+      {
+        logo: partner6Image,
+        description: [
+          "1° Lugar Desafío Go! Innova",
+          "Final Nacional 2021",
         ],
       },
       {
