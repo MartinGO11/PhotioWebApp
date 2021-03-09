@@ -20,6 +20,7 @@ import partner13Image from "../components/home/partnersLogos/OpenBeaucheff.png";
 import partner14Image from "../components/home/partnersLogos/Riverside.png";
 import partner15Image from "../components/home/partnersLogos/smartaraucania.png";
 import partner16Image from "../components/home/partnersLogos/zerodust.png";
+import partner17Image from "../components/home/partnersLogos/LatinGreenAwards.png";
 import news1Image from "../components/home/newsImages/news_1.png";
 import news2Image from "../components/home/newsImages/news_2.png";
 import news3Image from "../components/home/newsImages/news_3.png";
@@ -475,7 +476,7 @@ export const items = {
         ],
       },
       {
-        logo: partner13Image,
+        logo: partner17Image,
         description: [
           "500 mejores proyectos",
           "Premios Latinoamérica Verde 2020",
