@@ -6,7 +6,7 @@ export const SliderNewsComponent = ({ sliderNewsContent }) => {
 
   const styles = {
     paperContainer: {
-      backgroundImage: `url(${Image})`,
+      backgroundImage: `url(${sliderNewsContent.background})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'cover',

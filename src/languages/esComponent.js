@@ -20,6 +20,11 @@ import partner13Image from "../components/home/partnersLogos/OpenBeaucheff.png";
 import partner14Image from "../components/home/partnersLogos/Riverside.png";
 import partner15Image from "../components/home/partnersLogos/smartaraucania.png";
 import partner16Image from "../components/home/partnersLogos/zerodust.png";
+import news1Image from "../components/home/newsImages/news_1.png";
+import news2Image from "../components/home/newsImages/news_2.png";
+import news3Image from "../components/home/newsImages/news_3.png";
+import news4Image from "../components/home/newsImages/news_4.png";
+import news5Image from "../components/home/newsImages/news_5.png";
 
 // ApplicationsView
 import backgroundApplications from "../components/applications/backgroundCarousel.png";
@@ -146,31 +151,63 @@ export const items = {
       news: [
         {
           id: 1,
+          background: news1Image,
           date: "18-Nov-2020",
           title:
             "Photio, la tecnología chilena que descontamina el aire con pintura",
           origin: "por Fractal",
           description:
             "El proyecto desarrollado por la empresa Fractal toma como inspiraciónel proceso de fotosíntesis de las plantas",
-          url: 'http://....'
+          url:
+            "https://www.innovaspain.com/photio-chile-descontamina-aire-con-pintura/",
         },
         {
           id: 2,
-          date: "18-Nov-2020",
+          background: news2Image,
+          date: "09-Feb-2021",
           title:
-            "Photio, la tecnología chilena que descontamina el aire con pintura",
+            "Descontaminante y diverso: así es el colorido nuevo mural que luce la Torre Entel",
           origin: "por Fractal",
           description:
-            "El proyecto desarrollado por la empresa Fractal toma como inspiraciónel proceso de fotosíntesis de las plantas",
+            "Nuevo mural en el centro de Santiago ayuda a descontaminar, gracias a una nanotecnología que replica el proceso de fotosíntesis",
+          url:
+            "https://finde.latercera.com/cultura-pop/torre-entel-nuevo-mural-hecho-en-casa/",
         },
         {
           id: 3,
-          date: "18-Nov-2020",
+          background: news3Image,
+          date: "23-Jun-2020",
           title:
-            "Photio, la tecnología chilena que descontamina el aire con pintura",
+            "Photio participará en la Segunda Generación de KnowHub Ignition",
           origin: "por Fractal",
           description:
-            "El proyecto desarrollado por la empresa Fractal toma como inspiraciónel proceso de fotosíntesis de las plantas",
+            "Proyecto será parte del programa de apoyo al emprendimiento de Know Hub Chile y la Universidad de California Riverside",
+          url:
+            "https://knowhub.cl/2020/06/23/know-hub-ignition-selecciona-los-16-proyectos-para-su-segunda-generacion/",
+        },
+        {
+          id: 4,
+          background: news4Image,
+          date: "20-Oct-2020",
+          title:
+            "Fractal apuesta por descontaianr el aire usando nanotecnología",
+          origin: "por Fractal",
+          description:
+            "Un m2 del producto photio equivale a plantar cuatro arboles para mitigar la contaminación",
+          url:
+            "https://knowhub.cl/wp-content/uploads/2020/10/Fractal-ELMERc.pdf",
+        },
+        {
+          id: 5,
+          background: news5Image,
+          date: "05-Mar-2021",
+          title:
+            "Photio y Echeverria Izquierdo a la vanguaria en edificios descontaminantes",
+          origin: "por Fractal",
+          description:
+            "Primer edificio de uso residencial en Latinoamérica en implementar una nano tecnología descontaminante",
+          url:
+            "https://www.linkedin.com/feed/update/urn:li:activity:6773244316090454016/",
         },
       ],
     },
@@ -418,38 +455,47 @@ export const items = {
       },
     ],
     road: {
-      image: road
+      image: road,
     },
     recognitions: [
       {
         logo: partner11Image,
-        description: ['1° Lugar $100K Latam','MIT Argentina 2019']
+        description: ["1° Lugar $100K Latam", "MIT Argentina 2019"],
       },
       {
         logo: partner5Image,
-        description: ['Premio Felipe Álvarez','Universidad de Chile 2020']
+        description: ["Premio Felipe Álvarez", "Universidad de Chile 2020"],
       },
       {
         logo: partner9Image,
-        description: ['Ganadores Programa Ignition','Know Hub 2020']
+        description: ["Ganadores Programa Ignition", "Know Hub 2020"],
       },
       {
         logo: partner12Image,
-        description: ['Premio Henri Nestlé','Chile 2020']
+        description: ["Premio Henri Nestlé", "Chile 2020"],
       },
       {
         logo: partner10Image,
-        description: ['Ganadores Concurso Comunal de Innovación','Municipalidad de Las Condes 2020']
+        description: [
+          "Ganadores Concurso Comunal de Innovación",
+          "Municipalidad de Las Condes 2020",
+        ],
       },
       {
         logo: partner13Image,
-        description: ['500 mejores proyectos','Premios Latinoamérica Verde 2020']
+        description: [
+          "500 mejores proyectos",
+          "Premios Latinoamérica Verde 2020",
+        ],
       },
       {
         logo: partner16Image,
-        description: ['Finalistas Desafío Zero Dust Spence BHP','Expande Minería 2020']
-      }
-    ]
+        description: [
+          "Finalistas Desafío Zero Dust Spence BHP",
+          "Expande Minería 2020",
+        ],
+      },
+    ],
   },
   buyView: {
     carouselContent: [
@@ -457,7 +503,7 @@ export const items = {
         background: backgroundContact,
         description: (
           <p style={{ margin: "0px", padding: "0px" }}>
-            NOS AJUSTAMOS A LOS REQUERIMIENTOS DE TODAS {" "}
+            NOS AJUSTAMOS A LOS REQUERIMIENTOS DE TODAS{" "}
             <strong>TUS IDEAS O PROYECTOS</strong>
           </p>
         ),
@@ -477,7 +523,11 @@ export const items = {
     },
     buyItems: [
       {
-        title: <p>SERVICIO DE ASESORÍA <br /> Y CONSULTORIA</p>,
+        title: (
+          <p>
+            SERVICIO DE ASESORÍA <br /> Y CONSULTORIA
+          </p>
+        ),
         img: serviceLogo,
         to: "/talk",
         description: [
@@ -490,7 +540,11 @@ export const items = {
         actionTitle: "Conversemos",
       },
       {
-        title: <p>VENTA DE <br /> ADITIVO</p>,
+        title: (
+          <p>
+            VENTA DE <br /> ADITIVO
+          </p>
+        ),
         img: buyLogo,
         to: "/contact",
         description: [
@@ -548,10 +602,22 @@ export const items = {
         img: step1,
         title: "Instrucciones de uso",
         description: [
-          <p style={{ padding: "0px", marginBottom: "2px", color: colors.gray_2 }}>
+          <p
+            style={{
+              padding: "0px",
+              marginBottom: "2px",
+              color: colors.gray_2,
+            }}
+          >
             Incorpora Photio en el material que desees
           </p>,
-          <p style={{ fontWeight: "bold", marginTop: "0px", color: colors.gray_2 }}>
+          <p
+            style={{
+              fontWeight: "bold",
+              marginTop: "0px",
+              color: colors.gray_2,
+            }}
+          >
             pintura, asfalto, concreto, hormigón u otro.
           </p>,
           <p style={{ padding: "0px", color: colors.gray_2 }}>
@@ -574,7 +640,9 @@ export const items = {
             transformación de sustancias contaminantes mediante una serie de
             reacciones fotoquímicas.
           </p>,
-          <p style={{ padding: "0px", fontWeight: "bold", color: colors.gray_2 }}>
+          <p
+            style={{ padding: "0px", fontWeight: "bold", color: colors.gray_2 }}
+          >
             A la fecha Photio ha demostrado capacidad para remover de forma
             eficiente monóxido de carbono, óxidos de nitrógeno, óxidos de
             azufre, metano, compuestos orgánicos volátiles, amonio, virus,
