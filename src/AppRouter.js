@@ -19,7 +19,7 @@ export default function AppRouter() {
         <Route exact path="/applications" component={ ApplicationsView } />
         <Route exact path="/about" component={ AboutView } />
         <Route exact path="/contact" component={ ContactView } />
-        <Route exact path="/talk" component={ TalkView } />
+        {/* <Route exact path="/talk" component={ TalkView } /> */}
         <Route path="/" component={ HomeView } />
       </Switch>
     </Router>

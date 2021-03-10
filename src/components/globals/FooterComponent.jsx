@@ -22,8 +22,8 @@ export const FooterComponent = ({ footerView }) => {
               <img src={pinIcon} alt={`Photio-footerItem-${footerView.address.title}`} />
             </Grid>
             <Grid item xs={10}>
-              <p style={{ fontWeight: 'bold' }}> {footerView.address.title} </p>
-              <p>
+              <p style={{ fontWeight: 'bold', margin: '0px' }}> {footerView.address.title}</p>
+              <p style={{ margin: '0px' }}>
                 <a target='_blank' href={footerView.address.link} rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                   {footerView.address.description}
                 </a>
@@ -37,8 +37,8 @@ export const FooterComponent = ({ footerView }) => {
               <img src={mailIcon} alt={`Photio-footerItem-${footerView.mail.title}`} />
             </Grid>
             <Grid item xs={10}>
-              <p style={{ fontWeight: 'bold' }}> {footerView.mail.title} </p>
-              <p>
+              <p style={{ fontWeight: 'bold', margin: '0px' }}> {footerView.mail.title} </p>
+              <p style={{ margin: '0px' }}>
                 <a href={`mailto:${footerView.mail.description}`} style={{ color: 'inherit', textDecoration: 'none' }}>{
                   footerView.mail.description}
                 </a>
@@ -53,8 +53,8 @@ export const FooterComponent = ({ footerView }) => {
               <img src={phoneIcon} alt={`Photio-footerItem-${footerView.phone.title}`} />
             </Grid>
             <Grid item xs={10}>
-              <p style={{ fontWeight: 'bold' }}> {footerView.phone.title} </p>
-              <p>
+              <p style={{ fontWeight: 'bold', margin: '0px' }}> {footerView.phone.title} </p>
+              <p style={{ margin: '0px' }}>
                 <a href={`tel:${footerView.phone.description}`} style={{ color: 'inherit', textDecoration: 'none' }}>
                   {footerView.phone.description}
                 </a>
