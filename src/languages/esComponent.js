@@ -26,6 +26,10 @@ import news2Image from "../components/home/newsImages/news_2.png";
 import news3Image from "../components/home/newsImages/news_3.png";
 import news4Image from "../components/home/newsImages/news_4.png";
 import news5Image from "../components/home/newsImages/news_5.png";
+import news3_1Image from "../components/home/newsImages/opcion_1.png";
+import news3_2Image from "../components/home/newsImages/opcion_2.png";
+import news3_3Image from "../components/home/newsImages/opcion_3.png";
+import news3_4Image from "../components/home/newsImages/opcion_4.png";
 
 // ApplicationsView
 import backgroundApplications from "../components/applications/backgroundCarousel.png";
@@ -176,7 +180,7 @@ export const items = {
         },
         {
           id: 3,
-          background: news3Image,
+          background: news3_1Image,
           date: "23-Jun-2020",
           title:
             "Photio participará en la Segunda Generación de KnowHub Ignition",

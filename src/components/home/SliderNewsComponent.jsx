@@ -6,35 +6,40 @@ export const SliderNewsComponent = ({ sliderNewsContent }) => {
 
   const styles = {
     paperContainer: {
-      backgroundImage: `url(${sliderNewsContent.background})`,
+      background: `linear-gradient(0deg, rgba(24,70,102,0.4), rgba(24,70,102,0.4)), url(${sliderNewsContent.background})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
-      minHeight: '300px',
-      display: 'flex',
-      alignItems: 'center',
+      minHeight: '450px',
       maxWidth: '100%',
-      marginLeft: '-10%'
+      marginLeft: '-10%',
+      marginBottom: '50px',
+      paddingTop: '40px',
+      color: colors.white
     }
   };
 
   const dateArray = sliderNewsContent.date.split('-');
 
   return (
+    <a href={sliderNewsContent.url} target='_blank' style={{textDecoration: 'none'}}>
     <Paper elevation={0} style={styles.paperContainer}>
       <Grid container direction="row" justify="flex-start" alignItems="flex-start" >
         <Grid item xs={1} />
-        <Grid item xs={1} style={{ color: colors.white, borderBottom: '3px solid #FFFFFF' }}>
+        <Grid item xs={2} style={{textAlign: 'left'}} >
           <p style={{ fontSize: '18px', margin: '0px', fontWeight: 'bold' }} > {dateArray[0]} </p>
-          <p style={{ fontSize: '18px', margin: '0px', fontWeight: 'bold', textTransform: 'uppercase' }}> {dateArray[1]} </p>
+          <p style={{ fontSize: '18px', margin: '0px', fontWeight: 'bold', textTransform: 'uppercase', borderBottom: '3px solid #FFFFFF' }}> {dateArray[1]} </p>
+          <p style={{ fontSize: '18px', margin: '0px'}} > {dateArray[2]} </p>
         </Grid>
-        <Grid item xs={1} />
-        <Grid item xs={8} style={{ color: colors.white, marginTop: '30px' }}>
-          <p style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '0px' }}>{sliderNewsContent.title} </p>
-          <p style={{ fontSize: '14px', textAlign: 'right', marginTop: '0px' }}> {sliderNewsContent.origin} </p>
-          <p style={{ fontSize: '14px', background: 'rgba(24,70,102,0.3)', padding: '5px' }} >{sliderNewsContent.description}</p>
+      </Grid>
+      <Grid container direction="row" justify="center" alignItems="flex-start" >
+        <Grid item xs={10} style={{ marginTop: '90px'}}>
+          <p style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '0px', textAlign: 'left' }}>{sliderNewsContent.title} </p>
+          <p style={{ fontSize: '12px', textAlign: 'right', marginTop: '0px' }}> {sliderNewsContent.origin} </p>
+          <p style={{ fontSize: '14px', background: 'rgb(24,70,102)', padding: '10px 25px 10px 25px', textAlign: 'left' }} >{sliderNewsContent.description}</p>
         </Grid>
       </Grid>
     </Paper>
+    </a>
   )
 }
