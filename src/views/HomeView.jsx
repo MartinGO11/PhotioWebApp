@@ -13,6 +13,7 @@ import { NavbarComponent } from "../components/globals/NavbarComponent";
 import { CarouselComponent } from "../components/globals/CarouselComponent";
 import { TitleComponent } from "../components/globals/TitleComponent";
 import { NewnessComponent } from "../components/home/NewnessComponent";
+import { WelcomeComponent } from "../components/home/WelcomeComponent";
 
 export const HomeView = () => {
   const homeStyles = homeStyle();
@@ -27,6 +28,9 @@ export const HomeView = () => {
       </Grid>
       <Grid item className={globalStyles.navbarComponent}>
         <NavbarComponent />
+      </Grid> 
+      <Grid item className={globalStyles.principalComponent}>
+        <WelcomeComponent titleContent={homeView.welcomeComponent} titleImage={titleIcon} showAction />
       </Grid> 
       <Grid item className={homeStyles.indicatorComponent}>
         <IndicatorComponents indicatorText={homeView.indicatorComponent} />
