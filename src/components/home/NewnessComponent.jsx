@@ -1,13 +1,9 @@
 import { Grid, Hidden } from "@material-ui/core";
 import React from "react";
 import colors from "../../styles/global/colors";
-import newnessImage from "./newnessImage.png";
 import newnessVideo from "./newnessVideo.mp4";
-import background from "./backgroundNewness.png";
-import globalStyle from "../../styles/global/globalStyle";
 
 export const NewnessComponent = ({ newnessText }) => {
-  const globalStyles = globalStyle();
 
   return (
     <>
@@ -34,22 +30,7 @@ export const NewnessComponent = ({ newnessText }) => {
             item
             xs={12}
             md={6}
-            // style={{
-            //   backgroundRepeat: "no-repeat",
-            //   backgroundPosition: "center",
-            //   backgroundSize: "cover",
-            //   backgroundImage: `url(${background})`,
-            //   height: "50vh",
-            //   display: "flex",
-            //   alignItems: "center",
-            // }}
           >
-            {/* <p
-              className={globalStyles.fontPoppins}
-              style={{ fontSize: "18px", color: "white", marginLeft: "40%" }}
-            >
-              RUTAS <span style={{ fontWeight: "900" }}>SUSTENTABLES</span>{" "}
-            </p> */}
             <video autoPlay muted loop height='300'>
               <source src={newnessVideo} type='video/mp4' />
               Tu navegador no soporta HTML5 audio.
@@ -86,23 +67,7 @@ export const NewnessComponent = ({ newnessText }) => {
             style= {{
               textAlign: 'center'
             }}
-            // style={{
-            //   backgroundRepeat: "no-repeat",
-            //   backgroundPosition: "center",
-            //   backgroundSize: "cover",
-            //   backgroundImage: `url(${background})`,
-            //   height: "50vh",
-            //   display: "flex",
-            //   alignItems: "center",
-            //   marginTop: '20px'
-            // }}
           >
-            {/* <p
-              className={globalStyles.fontPoppins}
-              style={{ fontSize: "18px", color: "white", marginLeft: "25%" }}
-            >
-              RUTAS <span style={{ fontWeight: "900" }}>SUSTENTABLES</span>{" "}
-            </p> */}
             <video autoPlay muted loop style={{width: '90%'}}>
               <source src={newnessVideo} type='video/mp4' />
               Tu navegador no soporta HTML5 audio.

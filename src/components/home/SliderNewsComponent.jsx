@@ -22,7 +22,7 @@ export const SliderNewsComponent = ({ sliderNewsContent }) => {
   const dateArray = sliderNewsContent.date.split('-');
 
   return (
-    <a href={sliderNewsContent.url} target='_blank' style={{textDecoration: 'none'}}>
+    <a href={sliderNewsContent.url} target='_blank' rel='noreferrer' style={{textDecoration: 'none'}}>
     <Paper elevation={0} style={styles.paperContainer}>
       <Grid container direction="row" justify="flex-start" alignItems="flex-start" >
         <Grid item xs={1} />

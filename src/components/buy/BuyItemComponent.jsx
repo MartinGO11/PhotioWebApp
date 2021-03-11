@@ -2,43 +2,10 @@ import React from "react";
 import { Grid, Hidden } from "@material-ui/core";
 import colors from "../../styles/global/colors";
 import globalStyle from "../../styles/global/globalStyle";
-// import { ColorButton } from '../../styles/customStyles/ColorButton';
 import { default as buyIcon } from "./buyIcon.png";
 import { default as serviceIcon } from "./serviceIcon.png";
-// import { NavLink } from "react-router-dom";
 
 const icons = [serviceIcon, buyIcon];
-
-{
-  /* 
-const ColorButtonDesktop = withStyles((theme) => ({
-  root: {
-    color: colors.gray_6,
-    fontSize: "18px",
-    padding: "3px 15px 3px 15px",
-    backgroundColor: colors.green_2,
-    fontFamily: "Poppins, sans-serif",
-    "&:hover": {
-      backgroundColor: colors.green_1,
-    },
-  },
-}))(Button);
-
-const ColorButtonMobile = withStyles((theme) => ({
-  root: {
-    color: colors.gray_6,
-    fontSize: "14px",
-    padding: "3px 15px 3px 15px",
-    backgroundColor: colors.green_2,
-    fontFamily: "Poppins, sans-serif",
-    "&:hover": {
-      backgroundColor: colors.green_1,
-    },
-  },
-}))(Button);
-
-*/
-}
 
 export const BuyItemComponent = ({ buyContent }) => {
   const globalStyles = globalStyle();
@@ -69,22 +36,6 @@ export const BuyItemComponent = ({ buyContent }) => {
                 />
                 <h1 style={{ fontSize: "24px" }}>{item.title}</h1>
                 <p style={{ fontSize: "18px" }}>{item.description}</p>
-                {/*
-                <NavLink
-                  key={`navbarItem-${index}`}
-                  activeClassName="active"
-                  className="nav-item nav-link"
-                  exact
-                  to={item.to}
-                  style={{ textDecoration: "none" }}
-                >
-
-                    <ColorButtonDesktop>
-                      {item.actionTitle}
-                    </ColorButtonDesktop>
-                    
-                </NavLink>
-                */}
               </Grid>
             );
           })}
@@ -122,21 +73,6 @@ export const BuyItemComponent = ({ buyContent }) => {
                 >
                   <h1 style={{ fontSize: "18px" }}>{item.title}</h1>
                   <p style={{ fontSize: "12px" }}>{item.description}</p>
-                  {/*
-                  <NavLink
-                    key={`navbarItem-${index}`}
-                    activeClassName="active"
-                    className="nav-item nav-link"
-                    exact
-                    to={item.to}
-                    style={{ textDecoration: "none" }}
-                  >
-                    
-                    <ColorButtonDesktop>
-                      {item.actionTitle}
-                    </ColorButtonDesktop>
-                  </NavLink>
-                    */}
                 </Grid>
               </Grid>
             );

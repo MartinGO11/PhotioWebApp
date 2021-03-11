@@ -9,7 +9,6 @@ import { ApplicationsView } from "./views/ApplicationsView";
 import { AboutView } from './views/AboutView';
 import { ContactView } from "./views/ContactView";
 import { WhatsIsView } from "./views/WhatsIsView";
-import { TalkView } from "./views/TalkView";
 
 export default function AppRouter() {
   return (
@@ -19,7 +18,6 @@ export default function AppRouter() {
         <Route exact path="/applications" component={ ApplicationsView } />
         <Route exact path="/about" component={ AboutView } />
         <Route exact path="/contact" component={ ContactView } />
-        {/* <Route exact path="/talk" component={ TalkView } /> */}
         <Route path="/" component={ HomeView } />
       </Switch>
     </Router>

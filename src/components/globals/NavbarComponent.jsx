@@ -80,7 +80,7 @@ export const NavbarComponent = () => {
                           disableScrollLock
                         >
                           {
-                            item.options.map(option => <p>{option}</p>)
+                            item.options.map((option, index) => <p key={`Photio_Option_${index}`}>{option}</p>)
                           }
                         </Popover>
                       </>

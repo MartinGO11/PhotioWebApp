@@ -5,7 +5,7 @@ import backgroundHome from "../components/home/backgroundCarousel.png";
 import client1Image from "../components/home/clientsLogos/echeverriaizq.png";
 import client2Image from "../components/home/clientsLogos/isa.png";
 import partner1Image from "../components/home/partnersLogos/Construye2025.png";
-import partner2Image from "../components/home/partnersLogos/corfo1.png";
+// import partner2Image from "../components/home/partnersLogos/corfo1.png";
 import partner3Image from "../components/home/partnersLogos/corfo2.png";
 import partner4Image from "../components/home/partnersLogos/ctec.png";
 import partner5Image from "../components/home/partnersLogos/felipealvarez.png";
@@ -23,13 +23,13 @@ import partner16Image from "../components/home/partnersLogos/zerodust.png";
 import partner17Image from "../components/home/partnersLogos/LatinGreenAwards.png";
 import news1Image from "../components/home/newsImages/news_1.png";
 import news2Image from "../components/home/newsImages/news_2.png";
-import news3Image from "../components/home/newsImages/news_3.png";
+// import news3Image from "../components/home/newsImages/news_3.png";
 import news4Image from "../components/home/newsImages/news_4.png";
 import news5Image from "../components/home/newsImages/news_5.png";
 import news3_1Image from "../components/home/newsImages/opcion_1.png";
-import news3_2Image from "../components/home/newsImages/opcion_2.png";
-import news3_3Image from "../components/home/newsImages/opcion_3.png";
-import news3_4Image from "../components/home/newsImages/opcion_4.png";
+// import news3_2Image from "../components/home/newsImages/opcion_2.png";
+// import news3_3Image from "../components/home/newsImages/opcion_3.png";
+// import news3_4Image from "../components/home/newsImages/opcion_4.png";
 
 // ApplicationsView
 import backgroundApplications from "../components/applications/backgroundCarousel.png";

@@ -22,7 +22,7 @@ export const NewsCardComponent = ({ newsContent }) => {
   return (
     <>
       <Hidden smDown>
-        <a href={newsContent.url} target='_blank' style={{textDecoration: 'none'}}>
+        <a href={newsContent.url} target='_blank' rel='noreferrer' style={{textDecoration: 'none'}}>
           <Paper elevation={0} style={styles.paperContainer}>
             <Grid
               container

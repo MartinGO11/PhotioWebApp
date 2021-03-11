@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Grid, Hidden } from "@material-ui/core";
 import homeStyle from "../../styles/global/homeStyle";
-import { NewsCardComponent } from "./NewsCardComponent";
 import colors from "../../styles/global/colors";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
