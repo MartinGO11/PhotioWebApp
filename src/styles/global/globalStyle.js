@@ -23,7 +23,7 @@ const globalStyle = makeStyles(theme => ({
     fontWeight: 'bold',
     padding: '0px',
     // marginBottom: '-15px',
-    maxHeight: '10vh'
+    maxHeight: '60px'
   },
   footerComponent: {
     background: colors.blue_2,
