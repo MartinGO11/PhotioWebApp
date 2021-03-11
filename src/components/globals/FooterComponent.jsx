@@ -16,7 +16,7 @@ export const FooterComponent = ({ footerView }) => {
   return (
     <div className={globalStyles.footerComponent}>
       <Grid container direction="row" justify="space-evenly" alignItems="baseline">
-        <Grid item xs={7} md={3}>
+        <Grid item xs={7} md={3} style={{marginTop: '40px'}}>
           <Grid container direction="row" justify="flex-start" alignItems="center" >
             <Grid item xs={2} style={{ textAlign: 'center' }} >
               <img src={pinIcon} alt={`Photio-footerItem-${footerView.address.title}`} />
@@ -31,7 +31,7 @@ export const FooterComponent = ({ footerView }) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={7} md={3}>
+        <Grid item xs={7} md={3} style={{marginTop: '40px'}}>
           <Grid container direction="row" justify="flex-start" alignItems="center" >
             <Grid item xs={2} style={{ textAlign: 'center' }} >
               <img src={mailIcon} alt={`Photio-footerItem-${footerView.mail.title}`} />
@@ -47,7 +47,7 @@ export const FooterComponent = ({ footerView }) => {
           </Grid>
 
         </Grid>
-        <Grid item xs={7} md={2}>
+        <Grid item xs={7} md={2} style={{marginTop: '40px'}}>
           <Grid container direction="row" justify="flex-start" alignItems="center" >
             <Grid item xs={2} style={{ textAlign: 'center' }} >
               <img src={phoneIcon} alt={`Photio-footerItem-${footerView.phone.title}`} />
