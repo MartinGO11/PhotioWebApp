@@ -10,5 +10,7 @@ export const sendFormValues = async ( body ) => {
     },
     body: JSON.stringify(body)
   });
-  console.log(response.json());
+  const responseResult = await response.json();
+
+  return responseResult === 'Enviado' ? true : false;
 }

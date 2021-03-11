@@ -68,16 +68,18 @@ const ColorButton = withStyles((theme) => ({
 export const FormContactComponent = ({ titleImage }) => {
   const classes = useStyles();
   const globalStyles = globalStyle();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [formValues, setFormValues] = useState({
-    name: "",
-    //lastName: "",
-    //jobTitle: "",
-    //enterprise: "",
+    names: "",
+    last_name: "",
+    position: "",
+    company: "",
+    country: "",
     phone: "",
     email: "",
-    //country: "",
     subject: "",
-    message: "",
+    text: "",
   });
 
   const handleChange = ({ target }) => {
@@ -85,7 +87,15 @@ export const FormContactComponent = ({ titleImage }) => {
   };
 
   const sendForm = () => {
-    sendFormValues(formValues);
+    setLoading(true);
+    sendFormValues(formValues)
+      .then((responseApi) => {
+        setLoading(!responseApi);
+        setSuccess(true);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const [state, setState] = React.useState({
@@ -147,7 +157,12 @@ export const FormContactComponent = ({ titleImage }) => {
       >
         <Grid item xs={1} md={2} />
         <Grid item xs={5} style={{ textAlign: "left", marginBottom: "30px" }}>
-          <h1 className={globalStyles.fontLato} style={{color: 'white', fontWeight: '900', fontSize: '48px'}}>CONTACTO</h1>
+          <h1
+            className={globalStyles.fontLato}
+            style={{ color: "white", fontWeight: "900", fontSize: "48px" }}
+          >
+            CONTACTO
+          </h1>
         </Grid>
         <Hidden mdUp>
           <Grid item xs={6} style={{ textAlign: "right" }}>
@@ -174,237 +189,125 @@ export const FormContactComponent = ({ titleImage }) => {
           </Grid>
         </Hidden>
       </Grid>
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-        spacing={1}
-      >
-        <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl variant="outlined" style={{ width: "100%" }}>
-            <InputLabel htmlFor="outlined-adornment-amount">Nombres</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.name}
-              name="name"
-              onChange={handleChange}
-              labelWidth={70}
-              className={classes.input}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl variant="outlined" style={{ width: "100%" }}>
-            <InputLabel htmlFor="outlined-adornment-amount">Email</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.email}
-              name="email"
-              onChange={handleChange}
-              labelWidth={70}
-              className={classes.input}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl variant="outlined" style={{ width: "100%" }}>
-            <InputLabel htmlFor="outlined-adornment-amount">
-              Teléfono
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.phone}
-              name="phone"
-              onChange={handleChange}
-              labelWidth={60}
-              className={classes.input}
-              color="primary"
-              type="number"
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl style={{ width: "100%" }} variant="outlined">
-            <InputLabel htmlFor="outlined-adornment-amount">Asunto</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.subject}
-              name="subject"
-              onChange={handleChange}
-              labelWidth={60}
-              className={classes.input}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl style={{ width: "100%" }} variant="outlined">
-            <InputLabel htmlFor="outlined-adornment-amount">
-              ¿En que te ayudamos?
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.message}
-              name="message"
-              onChange={handleChange}
-              labelWidth={200}
-              className={classes.input}
-              multiline
-              rows={6}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-        {/*
-        
-        <Grid item xs={10} md={4} style={{ margin: '10px 0px 10px 0px' }}>
-          <FormControl variant="outlined" style={{ width: '100%' }} >
-            <InputLabel htmlFor="outlined-adornment-amount">Apellidos</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.name}
-              name='lastName'
-              onChange={handleChange}
-              labelWidth={70}
-              className={classes.input}
-              color='primary'
-            />
-          </FormControl>
-        </Grid>
-        
-        */}
-      </Grid>
+      {!success && (
+        <>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={1}
+          >
+            <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
+              <FormControl variant="outlined" style={{ width: "100%" }}>
+                <InputLabel htmlFor="outlined-adornment-amount">
+                  Nombre y Apellido
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-amount"
+                  value={formValues.names}
+                  name="names"
+                  onChange={handleChange}
+                  labelWidth={70}
+                  className={classes.input}
+                  color="primary"
+                />
+              </FormControl>
+            </Grid>
+            <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
+              <FormControl variant="outlined" style={{ width: "100%" }}>
+                <InputLabel htmlFor="outlined-adornment-amount">
+                  Email
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-amount"
+                  value={formValues.email}
+                  name="email"
+                  onChange={handleChange}
+                  labelWidth={70}
+                  className={classes.input}
+                  color="primary"
+                />
+              </FormControl>
+            </Grid>
 
-      {/*
-      
+            <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
+              <FormControl variant="outlined" style={{ width: "100%" }}>
+                <InputLabel htmlFor="outlined-adornment-amount">
+                  Teléfono
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-amount"
+                  value={formValues.phone}
+                  name="phone"
+                  onChange={handleChange}
+                  labelWidth={60}
+                  className={classes.input}
+                  color="primary"
+                  type="number"
+                />
+              </FormControl>
+            </Grid>
+            <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
+              <FormControl style={{ width: "100%" }} variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-amount">
+                  Asunto
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-amount"
+                  value={formValues.subject}
+                  name="subject"
+                  onChange={handleChange}
+                  labelWidth={60}
+                  className={classes.input}
+                  color="primary"
+                />
+              </FormControl>
+            </Grid>
+            <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
+              <FormControl style={{ width: "100%" }} variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-amount">
+                  ¿En que te ayudamos?
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-amount"
+                  value={formValues.text}
+                  name="text"
+                  onChange={handleChange}
+                  labelWidth={200}
+                  className={classes.input}
+                  multiline
+                  rows={6}
+                  color="primary"
+                />
+              </FormControl>
+            </Grid>
+          </Grid>
 
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-        spacing={1}
-      >
-        <Grid item xs={5} md={2} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl variant="outlined" style={{ width: "100%" }}>
-            <InputLabel htmlFor="outlined-adornment-amount">Cargo</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.name}
-              name="jobTitle"
-              onChange={handleChange}
-              labelWidth={50}
-              className={classes.input}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={5} md={2} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl variant="outlined" style={{ width: "100%" }}>
-            <InputLabel htmlFor="outlined-adornment-amount">Empresa</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.name}
-              name="enterprise"
-              onChange={handleChange}
-              labelWidth={70}
-              className={classes.input}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={5} md={2} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl variant="outlined" style={{ width: "100%" }}>
-            <InputLabel htmlFor="outlined-adornment-amount">
-              Teléfono
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.name}
-              name="phone"
-              onChange={handleChange}
-              labelWidth={60}
-              className={classes.input}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={5} md={2} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl variant="outlined" style={{ width: "100%" }}>
-            <InputLabel htmlFor="outlined-adornment-amount">País</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.name}
-              name="country"
-              onChange={handleChange}
-              labelWidth={40}
-              className={classes.input}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-      </Grid>
-      
-      
-      */}
-
-      {/*
-      
-
-            <Grid
-        container
-        direction="row"
-        justify="space-evenly"
-        alignItems="center"
-        spacing={1}
-      >
-        <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl style={{ width: "100%" }} variant="outlined">
-            <InputLabel htmlFor="outlined-adornment-amount">Asunto</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.name}
-              name="subject"
-              onChange={handleChange}
-              labelWidth={60}
-              className={classes.input}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
-          <FormControl style={{ width: "100%" }} variant="outlined">
-            <InputLabel htmlFor="outlined-adornment-amount">
-              ¿En que te ayudamos?
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              value={formValues.name}
-              name="message"
-              onChange={handleChange}
-              labelWidth={200}
-              className={classes.input}
-              multiline
-              rows={6}
-              color="primary"
-            />
-          </FormControl>
-        </Grid>
-      </Grid>
-      
-      
-      */}
-
-      <Grid container direction="row" justify="center" alignItems="center">
-        <Grid item xs={10} md={6}>
-          <ColorButton variant="contained" onClick={sendForm}>
-            Enviar
-          </ColorButton>
-        </Grid>
-      </Grid>
+          <Grid container direction="row" justify="center" alignItems="center">
+            <Grid item xs={10} md={6}>
+              <ColorButton variant="contained" onClick={sendForm} disabled={loading}>
+                { loading ? 'Enviando datos...' : 'Enviar'}
+              </ColorButton>
+            </Grid>
+          </Grid>
+        </>
+      )}
+      {
+        success &&
+        <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={1}
+          >
+            <Grid item style={{ textAlign: 'center'}}>
+              <h1>¡Su mensaje ha sido enviado correctamente!</h1>
+              <h3>Pronto nos contactaremos con usted.</h3>
+            </Grid>
+          </Grid>
+      }
     </>
   );
 };
