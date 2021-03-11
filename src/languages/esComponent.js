@@ -179,6 +179,18 @@ export const items = {
             "https://finde.latercera.com/cultura-pop/torre-entel-nuevo-mural-hecho-en-casa/",
         },
         {
+          id: 5,
+          background: news5Image,
+          date: "05-Mar-2021",
+          title:
+            "Photio y Echeverria Izquierdo a la vanguaria en edificios descontaminantes",
+          origin: "por Fractal",
+          description:
+            "Primer edificio de uso residencial en Latinoamérica en implementar una nano tecnología descontaminante",
+          url:
+            "https://www.linkedin.com/feed/update/urn:li:activity:6773244316090454016/",
+        },
+        {
           id: 3,
           background: news3_1Image,
           date: "23-Jun-2020",
@@ -195,25 +207,14 @@ export const items = {
           background: news4Image,
           date: "20-Oct-2020",
           title:
-            "Fractal apuesta por descontaianr el aire usando nanotecnología",
+            "Fractal apuesta por descontaminar el aire usando nanotecnología",
           origin: "por Fractal",
           description:
             "Un m2 del producto photio equivale a plantar cuatro arboles para mitigar la contaminación",
           url:
             "https://knowhub.cl/wp-content/uploads/2020/10/Fractal-ELMERc.pdf",
         },
-        {
-          id: 5,
-          background: news5Image,
-          date: "05-Mar-2021",
-          title:
-            "Photio y Echeverria Izquierdo a la vanguaria en edificios descontaminantes",
-          origin: "por Fractal",
-          description:
-            "Primer edificio de uso residencial en Latinoamérica en implementar una nano tecnología descontaminante",
-          url:
-            "https://www.linkedin.com/feed/update/urn:li:activity:6773244316090454016/",
-        },
+        
       ],
     },
     partnersComponent: {

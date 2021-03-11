@@ -30,7 +30,7 @@ const globalStyle = makeStyles(theme => ({
     color: colors.white,
     fontFamily: 'Poppins, sans-serif',
     fontSize: '12px',
-    paddingTop: '20px',
+    // paddingTop: '20px',
     paddingBottom: '10px',
   },
   cardComponentDesktop: {
