@@ -22,7 +22,6 @@ const globalStyle = makeStyles(theme => ({
     fontFamily: 'Poppins, sans-serif',
     fontWeight: 'bold',
     padding: '0px',
-    // marginBottom: '-15px',
     maxHeight: '60px'
   },
   footerComponent: {
@@ -30,7 +29,6 @@ const globalStyle = makeStyles(theme => ({
     color: colors.white,
     fontFamily: 'Poppins, sans-serif',
     fontSize: '12px',
-    // paddingTop: '20px',
     paddingBottom: '10px',
   },
   cardComponentDesktop: {

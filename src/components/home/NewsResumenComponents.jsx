@@ -82,21 +82,6 @@ export const NewsResumenComponents = ({ newsText }) => {
               {slidesNews}
             </Swiper>
           </Grid>
-
-          {/* 
-
-          {
-            newsText.news.map(article => {
-              return (
-                <Grid key={article.id} item xs={10} md={4}>
-                  <NewsCardComponent newsContent={article} />
-                </Grid>
-              )
-            })
-          }
-         
-         
-         */}
         </Hidden>
         <Hidden mdUp>
           <Grid item xs={10} md={4}>

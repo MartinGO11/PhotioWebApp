@@ -75,15 +75,6 @@ export const PartnersComponent = ({ partnersContent }) => {
         <Grid item xs={5} md={8} />
       </Grid>
       <Grid container direction="row" justify="center" alignItems="center">
-        {/* {
-          clients.images.map((image, index) => {
-            return (
-              <Grid key={`Photio-Client-${index}`} item xs={8} md={5} style={{ textAlign: 'center', maxWidth: '90%' }} >
-                <img src={image} alt={'imageClient'} />
-              </Grid>
-            )
-          })
-        } */}
         <Grid item xs={10} md={8} style={{ maxWidth: "100vw" }}>
           <Hidden smDown>
             <Swiper
@@ -149,15 +140,6 @@ export const PartnersComponent = ({ partnersContent }) => {
         <Grid item xs={5} md={8} />
       </Grid>
       <Grid container direction="row" justify="center" alignItems="center">
-        {/* {
-          partners.images.map((image, index) => {
-            return (
-              <Grid key={`Photio-Partner-${index}`} item xs={5} md={3} style={{ textAlign: 'center', maxWidth: '90%' }} >
-                <img src={image} alt={'imagePartner'} />
-              </Grid>
-            )
-          })
-        } */}
         <Grid item xs={10} md={8} style={{ maxWidth: "100vw" }}>
           <Hidden smDown>
             <Swiper

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Grid } from "@material-ui/core";
 import { LanguageContext } from "../contexts/LanguageContext";
-// import homeStyle from '../styles/global/homeStyle';
 import globalStyle from "../styles/global/globalStyle";
 import { FooterComponent } from "../components/globals/FooterComponent";
 import { NavbarComponent } from "../components/globals/NavbarComponent";
@@ -12,7 +11,6 @@ import { BuyItemComponent } from '../components/buy/BuyItemComponent';
 import { default as contactIcon } from "../components/contact/contact.svg";
 
 export const ContactView = () => {
-  // const homeStyles = homeStyle();
   const globalStyles = globalStyle();
 
   const { dictionary } = useContext(LanguageContext);

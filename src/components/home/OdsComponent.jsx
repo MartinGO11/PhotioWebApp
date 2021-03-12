@@ -4,7 +4,6 @@ import globalStyle from "../../styles/global/globalStyle";
 import homeStyle from "../../styles/global/homeStyle";
 import { default as odsBannerDesktop } from "./odsBannerDesktop.png";
 import { default as odsDesktop } from "./odsDesktop.png";
-// import { default as odsBannerMobile } from "./odsBannerMobile.png";
 
 export const OdsComponent = ({ odsText }) => {
   const homeStyles = homeStyle();
@@ -33,9 +32,7 @@ export const OdsComponent = ({ odsText }) => {
               {odsText.description}
             </p>
           </Grid>
-          <Grid item md={1}>
-            {/* vacio */}
-          </Grid>
+          <Grid item md={1} />
           <Grid item md={5} className={globalStyles.center}>
             <img src={odsDesktop} alt="ods" style={{ maxWidth: "100%" }} />
           </Grid>
@@ -62,7 +59,6 @@ export const OdsComponent = ({ odsText }) => {
 
           <Grid item xs={8} className={globalStyles.center}>
             <img src={odsDesktop} alt="ods" style={{ maxWidth: "100%" }} />
-            {/* <img src={ods} alt="ods" /> */}
           </Grid>
         </Grid>
       </Hidden>

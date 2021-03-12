@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Grid } from "@material-ui/core";
 import { LanguageContext } from "../contexts/LanguageContext";
-// import homeStyle from '../styles/global/homeStyle';
 import globalStyle from "../styles/global/globalStyle";
 import { default as titleIcon } from "../components/about/titleIcon.svg";
 import { FooterComponent } from "../components/globals/FooterComponent";
@@ -13,7 +12,6 @@ import { RoadComponent } from "../components/about/RoadComponent";
 import { RecognitionComponent } from "../components/about/RecognitionComponent";
 
 export const AboutView = () => {
-  // const homeStyles = homeStyle();
   const globalStyles = globalStyle();
 
   const { dictionary } = useContext(LanguageContext);

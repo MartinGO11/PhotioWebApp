@@ -2,8 +2,6 @@ import React from 'react';
 import { Grid, Hidden, withStyles, Button } from '@material-ui/core';
 import globalStyle from '../../styles/global/globalStyle';
 import colors from '../../styles/global/colors';
-// import { ColorButton } from '../../styles/customStyles/ColorButton';
-// import { default as openKey } from '../home/openKey.svg';
 import { NavLink } from 'react-router-dom';
 
 
@@ -32,9 +30,7 @@ export const WelcomeComponent = ({ titleContent, titleImage, showAction = false 
           <Grid item xs={4} md={2} style={{ textAlign: 'left' }} >
             <img src={titleImage} alt="titleImage" style={{ maxWidth: '100%' }} />
           </Grid>
-          <Grid item xs={1} style={{ textAlign: 'right', paddingTop: '25px', paddingBottom: '25px' }}>
-            {/* <img src={openKey} alt="openKey" style={{ marginRight: '20px', maxHeight: '100%' }} /> */}
-          </Grid>
+          <Grid item xs={1} style={{ textAlign: 'right', paddingTop: '25px', paddingBottom: '25px' }} />
           <Grid item xs={7} md={5} className={globalStyles.fontLato} >
             {
               titleContent.description.map((description, index) => {
@@ -68,9 +64,7 @@ export const WelcomeComponent = ({ titleContent, titleImage, showAction = false 
           <Grid item xs={3} style={{ textAlign: 'center' }} >
             <img src={titleImage} alt="titleImage" style={{ maxWidth: '100%' }} />
           </Grid>
-          <Grid item xs={1} style={{ textAlign: 'right', paddingTop: '25px', paddingBottom: '25px' }}>
-            {/* <img src={openKey} alt="openKey" style={{ marginRight: '20px', maxHeight: '100%' }} /> */}
-          </Grid>
+          <Grid item xs={1} style={{ textAlign: 'right', paddingTop: '25px', paddingBottom: '25px' }} />
           <Grid item xs={7} className={globalStyles.fontLato} style={{paddingTop: '20px', paddingBottom: '20px'}} >
             {
               titleContent.description.map((description, index) => {

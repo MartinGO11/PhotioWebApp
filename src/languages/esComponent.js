@@ -5,7 +5,6 @@ import backgroundHome from "../components/home/backgroundCarousel.png";
 import client1Image from "../components/home/clientsLogos/echeverriaizq.png";
 import client2Image from "../components/home/clientsLogos/isa.png";
 import partner1Image from "../components/home/partnersLogos/Construye2025.png";
-// import partner2Image from "../components/home/partnersLogos/corfo1.png";
 import partner3Image from "../components/home/partnersLogos/corfo2.png";
 import partner4Image from "../components/home/partnersLogos/ctec.png";
 import partner5Image from "../components/home/partnersLogos/felipealvarez.png";

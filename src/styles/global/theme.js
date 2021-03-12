@@ -3,15 +3,6 @@ import { default as colors } from './colors';
 
 const theme = createMuiTheme({
   palette: {
-    // primary: {
-    //   main: colors.primary,
-    // },
-    // secondary: {
-    //   main: colors.dark,
-    // },
-    // error: {
-    //   main: colors.red_critical,
-    // },
     background: {
      default: colors.white,
     },
@@ -31,7 +22,6 @@ const theme = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
-        // '@font-face': "Titillium Web",
         'min-height': '100vh'
       }
     },

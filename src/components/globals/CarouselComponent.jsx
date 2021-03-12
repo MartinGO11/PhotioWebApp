@@ -9,7 +9,6 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-// import ListItemText from '@material-ui/core/ListItemText';
 import { NavLink } from 'react-router-dom';
 
 
@@ -79,7 +78,6 @@ export const CarouselComponent = ({ carouselContent }) => {
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundImage: `url(${carouselContent[0].background})`,
-          // background: 'black',
           height: '90vh',
         }}>
           <Hidden smDown>
@@ -166,7 +164,6 @@ export const CarouselComponent = ({ carouselContent }) => {
               position: 'absolute',
               top: '50%',
               left: '20%',
-              // marginRight: '10vw',
               textAlign: 'left'
             }}>
               {carouselContent[0].description}
