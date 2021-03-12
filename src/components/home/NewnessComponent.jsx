@@ -1,9 +1,11 @@
 import { Grid, Hidden } from "@material-ui/core";
 import React from "react";
 import colors from "../../styles/global/colors";
+import globalStyle from "../../styles/global/globalStyle";
 import newnessVideo from "./newnessVideo.mp4";
 
 export const NewnessComponent = ({ newnessText }) => {
+  const globalStyles = globalStyle();
 
   return (
     <>
@@ -26,15 +28,24 @@ export const NewnessComponent = ({ newnessText }) => {
             </div>
           </Grid>
           <Grid item xs={2} />
-          <Grid
-            item
-            xs={12}
-            md={6}
-          >
-            <video autoPlay muted loop height='300'>
-              <source src={newnessVideo} type='video/mp4' />
+          <Grid item xs={12} md={6} style={{ position: "relative" }}>
+            <video autoPlay muted loop height="300">
+              <source src={newnessVideo} type="video/mp4" />
               Tu navegador no soporta HTML5 audio.
             </video>
+            <p
+              style={{
+                position: "absolute",
+                top: "45%",
+                left: "20%",
+                color: "white",
+                fontSize: "24px",
+                margin: "0px",
+              }}
+              className={globalStyles.fontPoppins}
+            >
+              Rutas <span style={{ fontWeight: "bold" }}>sustentables</span>
+            </p>
           </Grid>
         </Grid>
       </Hidden>
@@ -64,14 +75,28 @@ export const NewnessComponent = ({ newnessText }) => {
           <Grid
             item
             xs={12}
-            style= {{
-              textAlign: 'center'
+            style={{
+              textAlign: "center",
+              position: "relative",
             }}
           >
-            <video autoPlay muted loop style={{width: '90%'}}>
-              <source src={newnessVideo} type='video/mp4' />
+            <video autoPlay muted loop style={{ width: "90%" }}>
+              <source src={newnessVideo} type="video/mp4" />
               Tu navegador no soporta HTML5 audio.
             </video>
+            <p
+              style={{
+                position: "absolute",
+                top: "45%",
+                left: "30%",
+                color: "white",
+                fontSize: "18px",
+                margin: "0px",
+              }}
+              className={globalStyles.fontPoppins}
+            >
+              Rutas <span style={{ fontWeight: "bold" }}>sustentables</span>
+            </p>
           </Grid>
         </Grid>
       </Hidden>

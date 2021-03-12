@@ -25,10 +25,10 @@ export const ConclutionComponent = ({ conclutionContent }) => {
           </Grid>
           <Grid item xs={1} />
           <Grid item xs={3} md={2}>
-            <img src={conclutionContent.certification.icon1} alt="Photio-Certification-UCH" />
+            <img src={conclutionContent.certification.icon1} alt="Photio-Certification-UCH" style={{maxWidth: '80%', textAlign: 'center'}} />
           </Grid>
           <Grid item xs={3} md={2}>
-            <img src={conclutionContent.certification.icon2} alt="Photio-Certification-UC" />
+            <img src={conclutionContent.certification.icon2} alt="Photio-Certification-UC" style={{maxWidth: '80%', textAlign: 'center'}} />
           </Grid>
         </Grid>
       </Hidden>
