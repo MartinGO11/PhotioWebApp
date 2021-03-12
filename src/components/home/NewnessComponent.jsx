@@ -37,7 +37,7 @@ export const NewnessComponent = ({ newnessText }) => {
               style={{
                 position: "absolute",
                 top: "45%",
-                left: "20%",
+                left: "150px",
                 color: "white",
                 fontSize: "24px",
                 margin: "0px",
@@ -88,7 +88,7 @@ export const NewnessComponent = ({ newnessText }) => {
               style={{
                 position: "absolute",
                 top: "45%",
-                left: "30%",
+                left: "100px",
                 color: "white",
                 fontSize: "18px",
                 margin: "0px",

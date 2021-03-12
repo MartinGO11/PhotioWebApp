@@ -88,7 +88,7 @@ export const items = {
     },
     indicatorComponent: {
       meters: {
-        count: "3423",
+        count: "1350",
         description: (
           <p style={{ margin: "0px", padding: "0px" }}>
             Metros cuadrados pintados con <strong> Photio </strong>
@@ -96,7 +96,7 @@ export const items = {
         ),
       },
       cities: {
-        count: "58",
+        count: "12",
         description: (
           <p style={{ margin: "0px", padding: "0px" }}>
             Comunas de Chile pintadas con <strong> Photio </strong>
