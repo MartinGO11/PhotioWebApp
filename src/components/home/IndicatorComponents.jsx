@@ -14,12 +14,12 @@ export const IndicatorComponents = ({ indicatorText }) => {
       <Grid container direction="row" justify="space-evenly" alignItems="flex-start" style={{paddingTop: '30px'}}  >
         <Grid item xs={1} />
         <Grid item xs={4} md={2} className={globalStyles.fontLato} >
-          <img src={paintRoll} alt="paintRoll" />
+          <img src={paintRoll} alt="paintRoll" style={{maxHeight: '50px'}} />
           <p className={globalStyles.paragraphTitle} style={{ margin: '0px' }}>{indicatorText.meters.count}</p>
           <p style={{ fontSize: '24px', margin: '0px' }}>{indicatorText.meters.description}</p>
         </Grid>
         <Grid item xs={4} md={2} className={globalStyles.fontLato} >
-          <img src={map} alt="map" />
+          <img src={map} alt="map" style={{maxHeight: '50px'}} />
           <p className={globalStyles.paragraphTitle} style={{ margin: '0px' }}>{indicatorText.cities.count}</p>
           <p style={{ fontSize: '24px', margin: '0px' }}>{indicatorText.cities.description}</p>
         </Grid>
@@ -29,12 +29,12 @@ export const IndicatorComponents = ({ indicatorText }) => {
     <Hidden mdUp>
       <Grid container direction="row" justify="center" alignItems="center"  >
         <Grid item xs={5} md={2} className={globalStyles.fontLato} >
-          <img src={paintRoll} alt="paintRoll" />
+          <img src={paintRoll} alt="paintRoll" style={{maxHeight: '50px'}} />
           <p style={{ fontSize: '24px', margin: '0px', fontWeight: 'bold' }}>{indicatorText.meters.count}</p>
           <p style={{ fontSize: '14px', margin: '0px' }}>{indicatorText.meters.description}</p>
         </Grid>
         <Grid item xs={5} md={2} className={globalStyles.fontLato} >
-          <img src={map} alt="map" />
+          <img src={map} alt="map" style={{maxHeight: '50px'}} />
           <p style={{ fontSize: '24px', margin: '0px', fontWeight: 'bold' }}>{indicatorText.cities.count}</p>
           <p style={{ fontSize: '14px', margin: '0px' }}>{indicatorText.cities.description}</p>
         </Grid>

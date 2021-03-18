@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { Grid, Hidden } from "@material-ui/core";
 import colors from "../../styles/global/colors";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 import { SliderPartnerComponent } from "./SliderPartnerComponent";
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export const PartnersComponent = ({ partnersContent }) => {
   const { clients, partners } = partnersContent;
@@ -84,6 +84,7 @@ export const PartnersComponent = ({ partnersContent }) => {
               wrapperTag="ul"
               slidesPerView={2}
               spaceBetween={30}
+              autoplay
             >
               {slidesClient}
             </Swiper>
@@ -96,6 +97,7 @@ export const PartnersComponent = ({ partnersContent }) => {
               wrapperTag="ul"
               slidesPerView={1}
               spaceBetween={10}
+              autoplay
             >
               {slidesClient}
             </Swiper>
@@ -149,6 +151,7 @@ export const PartnersComponent = ({ partnersContent }) => {
               wrapperTag="ul"
               slidesPerView={3}
               spaceBetween={30}
+              autoplay
             >
               {slidesPartner}
             </Swiper>
@@ -161,6 +164,7 @@ export const PartnersComponent = ({ partnersContent }) => {
               wrapperTag="ul"
               slidesPerView={1}
               spaceBetween={10}
+              autoplay
             >
               {slidesPartner}
             </Swiper>

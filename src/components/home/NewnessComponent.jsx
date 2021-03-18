@@ -28,7 +28,7 @@ export const NewnessComponent = ({ newnessText }) => {
             </div>
           </Grid>
           <Grid item xs={2} />
-          <Grid item xs={12} md={6} style={{ position: "relative" }}>
+          <Grid item xs={12} md={6} style={{ position: "relative", maxWidth: '550px' }}>
             <video autoPlay muted loop height="300">
               <source src={newnessVideo} type="video/mp4" />
               Tu navegador no soporta HTML5 audio.
@@ -37,7 +37,7 @@ export const NewnessComponent = ({ newnessText }) => {
               style={{
                 position: "absolute",
                 top: "45%",
-                left: "150px",
+                left: 'calc(50% - 119px)',
                 color: "white",
                 fontSize: "24px",
                 margin: "0px",
@@ -88,7 +88,7 @@ export const NewnessComponent = ({ newnessText }) => {
               style={{
                 position: "absolute",
                 top: "45%",
-                left: "100px",
+                left: 'calc(50% - 90px)',
                 color: "white",
                 fontSize: "18px",
                 margin: "0px",

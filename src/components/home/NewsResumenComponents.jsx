@@ -3,11 +3,11 @@ import { Grid, Hidden } from "@material-ui/core";
 import homeStyle from "../../styles/global/homeStyle";
 import colors from "../../styles/global/colors";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 import { SliderNewsComponent } from "./SliderNewsComponent";
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export const NewsResumenComponents = ({ newsText }) => {
   const homeStyles = homeStyle();
@@ -77,6 +77,7 @@ export const NewsResumenComponents = ({ newsText }) => {
               wrapperTag="ul"
               slidesPerView={3}
               spaceBetween={10}
+              autoplay
               style={{ maxWidth: "100vw" }}
             >
               {slidesNews}
@@ -92,6 +93,7 @@ export const NewsResumenComponents = ({ newsText }) => {
               wrapperTag="ul"
               slidesPerView={1}
               spaceBetween={10}
+              autoplay
               style={{ maxWidth: "100vw" }}
             >
               {slidesNews}

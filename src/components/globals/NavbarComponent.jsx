@@ -3,6 +3,7 @@ import { Grid, Hidden, Popover } from "@material-ui/core";
 import { default as navbarItems } from "../../constants/navbarItems.json";
 import { NavLink } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
+import colors from "../../styles/global/colors";
 
 const useStyles = makeStyles((theme) => ({
   popover: {
@@ -10,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(1),
+    background: colors.blue_1,
+    color: 'white',
+    fontFamily: 'Poppins, sans-serif',
   },
 }));
 
