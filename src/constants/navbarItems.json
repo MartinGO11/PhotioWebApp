@@ -10,12 +10,11 @@
   {
     "title": "Aplicaciones",
     "to": "/applications",
-    "options": [
+    "options":[
       "Construcción",
       "Transporte y Vialidad",
       "Agricultura",
-      "Minería"
-    ]
+      "Minería"]
   },
   {
     "title": "Nosotros",

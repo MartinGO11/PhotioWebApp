@@ -78,17 +78,17 @@ export const items = {
         </p>,
         <p style={{ margin: "0px", padding: "0px" }}>
           Aumenta positivamente la reputación <strong> medioambiental </strong>{" "}
-          de tu empresa y aporta a la comunidad en donde estas inserto.
+          de tu empresa y aporta a la comunidad en donde estás inserto.
         </p>,
       ],
       titleAction: "¡CONVERSEMOS!",
       descriptionAction:
         "Juntémosnos a discutir la problemática o desafio a resolver",
-      textButtonAction: "Agendar reunión",
+      textButtonAction: "Contáctanos",
     },
     indicatorComponent: {
       meters: {
-        count: "1350",
+        count: "3100",
         description: (
           <p style={{ margin: "0px", padding: "0px" }}>
             Metros cuadrados pintados con <strong> Photio </strong>
@@ -96,7 +96,7 @@ export const items = {
         ),
       },
       cities: {
-        count: "12",
+        count: "14",
         description: (
           <p style={{ margin: "0px", padding: "0px" }}>
             Comunas de Chile pintadas con <strong> Photio </strong>
@@ -134,7 +134,6 @@ export const items = {
             {" "}
             pulmones verdes para Chile y el mundo
           </span>{" "}
-          entero
         </p>
       ),
     },
@@ -150,16 +149,16 @@ export const items = {
       ),
       news: [
         {
-          id: 1,
-          background: news1Image,
-          date: "18-Nov-2020",
+          id: 4,
+          background: news4Image,
+          date: "20-Oct-2020",
           title:
-            "Photio, la tecnología chilena que descontamina el aire con pintura",
+            "Fractal apuesta por descontaminar el aire usando nanotecnología",
           origin: "por Fractal",
           description:
-            "El proyecto desarrollado por la empresa Fractal toma como inspiraciónel proceso de fotosíntesis de las plantas",
+            "Un metro cuadrado del producto photio equivale a plantar cuatro arboles para mitigar la contaminación",
           url:
-            "https://www.innovaspain.com/photio-chile-descontamina-aire-con-pintura/",
+            "https://knowhub.cl/wp-content/uploads/2020/10/Fractal-ELMERc.pdf",
         },
         {
           id: 2,
@@ -178,10 +177,10 @@ export const items = {
           background: news5Image,
           date: "05-Mar-2021",
           title:
-            "Photio y Echeverria Izquierdo a la vanguaria en edificios descontaminantes",
+            "Photio y Echeverría Izquierdo a la vanguardia en edificios descontaminantes",
           origin: "por Fractal",
           description:
-            "Primer edificio de uso residencial en Latinoamérica en implementar una nano tecnología descontaminante",
+            "Primer edificio de uso residencial en Latinoamérica en implementar una nanotecnología descontaminante",
           url:
             "https://www.linkedin.com/feed/update/urn:li:activity:6773244316090454016/",
         },
@@ -198,16 +197,16 @@ export const items = {
             "https://knowhub.cl/2020/06/23/know-hub-ignition-selecciona-los-16-proyectos-para-su-segunda-generacion/",
         },
         {
-          id: 4,
-          background: news4Image,
-          date: "20-Oct-2020",
+          id: 1,
+          background: news1Image,
+          date: "18-Nov-2019",
           title:
-            "Fractal apuesta por descontaminar el aire usando nanotecnología",
+            "Photio, la tecnología chilena que descontamina el aire con pintura",
           origin: "por Fractal",
           description:
-            "Un m2 del producto photio equivale a plantar cuatro arboles para mitigar la contaminación",
+            "El proyecto desarrollado por la empresa Fractal toma como inspiración el proceso de fotosíntesis de las plantas",
           url:
-            "https://knowhub.cl/wp-content/uploads/2020/10/Fractal-ELMERc.pdf",
+            "https://www.innovaspain.com/photio-chile-descontamina-aire-con-pintura/",
         },
         
       ],
@@ -220,13 +219,13 @@ export const items = {
       partners: {
         title: "SOCIOS ESTRATÉGICOS",
         images: [
+          partner8Image,
+          partner14Image,
+          partner13Image,
+          partner7Image,
           partner1Image,
           partner3Image,
           partner4Image,
-          partner7Image,
-          partner8Image,
-          partner13Image,
-          partner14Image,
           partner15Image,
         ],
       },
@@ -254,7 +253,7 @@ export const items = {
       titleAction: "¡CONVERSEMOS!",
       descriptionAction:
         "Juntémosnos a discutir la problemática o desafio a resolver",
-      textButtonAction: "Agendar reunión",
+      textButtonAction: "Contáctanos",
     },
     applications: [
       {
@@ -305,7 +304,7 @@ export const items = {
         benefitsDescription: [
           <p style={{ margin: "0px", padding: "0px" }}>
             Compensa y reduce el impacto medioambiental y social del proyecto y
-            las emisiones indirectas.
+            sus emisiones indirectas.
           </p>,
           <p style={{ margin: "0px", padding: "0px" }}>
             Obtén sellos medioambientales.
@@ -324,24 +323,19 @@ export const items = {
         img: backgroundAgriculture,
         description: [
           <p style={{ margin: "0px", padding: "0px" }}>
-            Compensa y reduce el impacto medioambiental y social del proyecto y
-            las emisiones indirectas.
+            Aplica el producto en poíleros de uso agrícola y modifica la atmósfera en la vecindad de cultivo.
           </p>,
           <p style={{ margin: "0px", padding: "0px" }}>
-            Obtén sellos medioambientales.
-          </p>,
-          <p style={{ margin: "0px", padding: "0px" }}>
-            Evita el ensuciamiento de estructuras viales.
-          </p>,
-          <p style={{ margin: "0px", padding: "0px" }}>
-            Disminuye el calor disipado por el pavimento.
+            Mejora la calidad de tu cosecha y disminuye las posibilidades de infección por hongos y bacterias.
           </p>,
         ],
         benefitsTitle: "BENEFICIOS",
         benefitsDescription: [
           <p style={{ margin: "0px", padding: "0px" }}>
-            Regula las concentraciones de gases contaminantes en directo
-            contacto con el cultivo.
+            Aumenta la vida útil del polímero utilizado.
+          </p>,
+          <p style={{ margin: "0px", padding: "0px" }}>
+            Regula las concentraciones de gases contaminantes en directo contacto con el cultivo.
           </p>,
           <p style={{ margin: "0px", padding: "0px" }}>
             Obtén sellos y certificaciones medioambientales en tu empresa.
@@ -355,7 +349,7 @@ export const items = {
         description: [
           <p style={{ margin: "0px", padding: "0px" }}>
             Incorpora el producto en zonas como fundiciones, truckshops o
-            procesos de chancado, para abatir de forma barata y eficiente gases
+            procesos de chancado, para abatir de forma económicas y eficiente, gases
             contaminantes y material particulado.
           </p>,
         ],
@@ -365,7 +359,7 @@ export const items = {
             Compensa la huella de carbono de tus procesos.
           </p>,
           <p style={{ margin: "0px", padding: "0px" }}>
-            Disminuye los factores de riesgo operacional y aumenta la
+            Disminuye los factores de riesgos operacionales y aumenta la
             productividad.
           </p>,
           <p style={{ margin: "0px", padding: "0px" }}>
@@ -381,7 +375,7 @@ export const items = {
         background: backgroundAbout,
         description: (
           <p style={{ margin: "0px", padding: "0px" }}>
-            SÚMATE A LA EXPERIENCIA Y COMPROMISO DE UN GRUPO DE EXPERTOS EN
+            SUMA A TU EMPRESA LOS CONOCIMIENTOS Y COMPROMISO DE UN GRUPO DE EXPERTOS EN  
             <strong>INNOVACIÓN Y SUSTENTABILIDAD​</strong>
           </p>
         ),
@@ -392,7 +386,7 @@ export const items = {
       titleAction: "¡CONVERSEMOS!",
       descriptionAction:
         "Juntémosnos a discutir la problemática o desafio a resolver",
-      textButtonAction: "Agendar reunión",
+      textButtonAction: "Contáctanos",
     },
     aboutItems: [
       {
@@ -429,7 +423,7 @@ export const items = {
           <p style={{ margin: "0px", padding: "0px" }}>
             Utilizando nanotecnología, química de superficies y herramientas de
             fabricación avanzada, Fractal tiene como misión crear productos que
-            sirvan como herramienta para que cada empresa, municipio y persona
+            sirvan como herramienta para que cada empresa, entidad gubernamental y persona
             pueda compensar y reducir su huella de carbono.​
           </p>,
           <p style={{ margin: "0px", padding: "0px" }}>
@@ -454,45 +448,45 @@ export const items = {
     recognitions: [
       {
         logo: partner11Image,
-        description: ["1° Lugar $100K Latam", "MIT Argentina 2019"],
+        description: [<b>1° Lugar $100K Latam</b>, "MIT Argentina 2019"],
       },
       {
         logo: partner5Image,
-        description: ["Premio Felipe Álvarez", "Universidad de Chile 2020"],
+        description: [<b>Premio Felipe Álvarez</b>, "Universidad de Chile 2020"],
       },
       {
-        logo: partner9Image,
-        description: ["Ganadores Programa Ignition", "Know Hub 2020"],
+        logo: partner9Image,  
+        description: [<b>Ganadores Programa Ignition</b>, "Know Hub 2020"],
       },
       {
         logo: partner12Image,
-        description: ["Premio Henri Nestlé", "Chile 2020"],
+        description: [<b>Premio Henri Nestlé</b>, "Chile 2020"],
       },
       {
         logo: partner10Image,
         description: [
-          "Ganadores Concurso Comunal de Innovación",
+          <b>Ganadores Concurso Comunal de Innovación</b>,
           "Municipalidad de Las Condes 2020",
         ],
       },
       {
         logo: partner17Image,
         description: [
-          "500 mejores proyectos",
+          <b>500 mejores proyectos</b>,
           "Premios Latinoamérica Verde 2020",
         ],
       },
       {
         logo: partner6Image,
         description: [
-          "1° Lugar Desafío Go! Innova",
+          <b>1° Lugar Desafío Go! Innova</b>,
           "Final Nacional 2021",
         ],
       },
       {
         logo: partner16Image,
         description: [
-          "Finalistas Desafío Zero Dust Spence BHP",
+          <b>Finalistas Desafío Zero Dust Spence BHP</b>,
           "Expande Minería 2020",
         ],
       },
@@ -520,7 +514,7 @@ export const items = {
       titleAction: "¡CONVERSEMOS!",
       descriptionAction:
         "Juntémosnos a discutir la problemática o desafio a resolver",
-      textButtonAction: "Agendar reunión",
+      textButtonAction: "Contáctanos",
     },
     buyItems: [
       {
@@ -533,7 +527,7 @@ export const items = {
         to: "/talk",
         description: [
           <p style={{ margin: "0px", padding: "0px" }}>
-            Si deseas compensar emisiones o planeas desarrollar un
+            Si deseas compensar emisiones o planeas desarrollar una
             implementación de gran envergadura, nuestros profesionales te
             atenderán a la brevedad para abordar tu proyecto o idea. ​
           </p>,
@@ -584,7 +578,7 @@ export const items = {
     welcomeComponent: {
       description: [
         <p style={{ margin: "0px", padding: "0px" }}>
-          Photio es un aditivo que{" "}
+          Photio es un recubrimiento que{" "}
           <strong>simula el proceso de fotosíntesis</strong> en el lugar de
           aplicación.{" "}
         </p>,
@@ -596,7 +590,7 @@ export const items = {
       titleAction: "¡CONVERSEMOS!",
       descriptionAction:
         "Juntémosnos a discutir la problemática o desafio a resolver",
-      textButtonAction: "Agendar reunión",
+      textButtonAction: "Contáctanos",
     },
     items: [
       {
@@ -610,7 +604,7 @@ export const items = {
               color: colors.gray_2,
             }}
           >
-            Incorpora Photio en el material que desees
+            Incorpora Photio en el material que desees tales como:
           </p>,
           <p
             style={{
@@ -636,17 +630,17 @@ export const items = {
         title: "Funcionamiento",
         description: [
           <p style={{ padding: "0px", color: colors.gray_2 }}>
-            El producto al distribuirse en el lugar de aplicación y al tomar
-            contacto con la radiación solar promueve la degradación y
+            El producto al distribuirse en el lugar de aplicación y tomar
+            contacto con la radiación solar, promueve la degradación y
             transformación de sustancias contaminantes mediante una serie de
             reacciones fotoquímicas.
           </p>,
           <p
             style={{ padding: "0px", fontWeight: "bold", color: colors.gray_2 }}
           >
-            A la fecha Photio ha demostrado capacidad para remover de forma
-            eficiente monóxido de carbono, óxidos de nitrógeno, óxidos de
-            azufre, metano, compuestos orgánicos volátiles, amonio, virus,
+            A la fecha Photio ha demostrado su capacidad para remover de forma
+            eficiente: monóxido de carbono, óxidos de nitrógeno, óxidos de
+            azufre, metano, compuestos orgánicos volátiles, amoníaco, virus,
             bacterias y hongos.
           </p>,
           <p style={{ padding: "0px", fontWeight: "bold" }}>

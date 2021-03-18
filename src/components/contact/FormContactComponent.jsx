@@ -267,7 +267,7 @@ export const FormContactComponent = ({ titleImage }) => {
             <Grid item xs={10} md={8} style={{ margin: "10px 0px 10px 0px" }}>
               <FormControl style={{ width: "100%" }} variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-amount">
-                  ¿En que te ayudamos?
+                  ¿En qué te ayudamos?
                 </InputLabel>
                 <OutlinedInput
                   id="outlined-adornment-amount"
