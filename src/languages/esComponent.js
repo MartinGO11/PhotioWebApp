@@ -25,6 +25,7 @@ import news2Image from "../components/home/newsImages/news_2.png";
 import news3Image from "../components/home/newsImages/news_3.png";
 import news4Image from "../components/home/newsImages/news_4.png";
 import news5Image from "../components/home/newsImages/news_5.png";
+import news6Image from "../components/home/newsImages/news_6.png";
 
 // ApplicationsView
 import backgroundApplications from "../components/applications/backgroundCarousel.png";
@@ -208,7 +209,18 @@ export const items = {
           url:
             "https://www.innovaspain.com/photio-chile-descontamina-aire-con-pintura/",
         },
-        
+        {
+          id: 6,
+          background: news6Image,
+          date: "23-Mar-2021",
+          title:
+            "Photio presente en mural sustentable de igualdad de género y racial",
+          origin: "por Fractal",
+          description:
+            "Converse bajo su campaña “Breaking Barriers for Equality in Gender”, inauguró un mural artístico sustentable que limpia el aire y que equivale a 650 árboles.",
+          url:
+            "https://www.diariosustentable.com/2021/03/converse-crea-mural-sustentable-que-busca-romper-las-barreras-en-la-igualdad-de-genero-y-raciales/",
+        },
       ],
     },
     partnersComponent: {
@@ -323,7 +335,7 @@ export const items = {
         img: backgroundAgriculture,
         description: [
           <p style={{ margin: "0px", padding: "0px" }}>
-            Aplica el producto en poíleros de uso agrícola y modifica la atmósfera en la vecindad de cultivo.
+            Aplica el producto en polímeros de uso agrícola y modifica la atmósfera en la vecindad de cultivo.
           </p>,
           <p style={{ margin: "0px", padding: "0px" }}>
             Mejora la calidad de tu cosecha y disminuye las posibilidades de infección por hongos y bacterias.
@@ -376,7 +388,7 @@ export const items = {
         description: (
           <p style={{ margin: "0px", padding: "0px" }}>
             SUMA A TU EMPRESA LOS CONOCIMIENTOS Y COMPROMISO DE UN GRUPO DE EXPERTOS EN  
-            <strong>INNOVACIÓN Y SUSTENTABILIDAD​</strong>
+            <strong> INNOVACIÓN Y SUSTENTABILIDAD​</strong>
           </p>
         ),
       },
