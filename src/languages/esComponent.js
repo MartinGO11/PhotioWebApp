@@ -26,6 +26,8 @@ import news3Image from "../components/home/newsImages/news_3.png";
 import news4Image from "../components/home/newsImages/news_4.png";
 import news5Image from "../components/home/newsImages/news_5.png";
 import news6Image from "../components/home/newsImages/news_6.png";
+import news7Image from "../components/home/newsImages/news_7.png";
+import news8Image from "../components/home/newsImages/news_8.png";
 
 // ApplicationsView
 import backgroundApplications from "../components/applications/backgroundCarousel.png";
@@ -220,6 +222,30 @@ export const items = {
             "Converse bajo su campaña “Breaking Barriers for Equality in Gender”, inauguró un mural artístico sustentable que limpia el aire y que equivale a 650 árboles.",
           url:
             "https://www.diariosustentable.com/2021/03/converse-crea-mural-sustentable-que-busca-romper-las-barreras-en-la-igualdad-de-genero-y-raciales/",
+        },
+        {
+          id: 7,
+          background: news7Image,
+          date: "06-Jun-2021",
+          title:
+            "Murales deportivos descontaminantes para la Roja Chilena",
+          origin: "por Fractal",
+          description:
+            "Photio junto a famoso muralista Chileno desarrollaron campaña de desarrollo de murales de las figuras de la Roja Chilena.",
+          url:
+            "https://www.alairelibre.cl/noticias/deportes/futbol/seleccion-chilena/los-extraordinarios-murales-descontaminantes-realizados-en-honor-a/2021-06-06/232926.html#gal_id&slide=foto_5",
+        },
+        {
+          id: 8,
+          background: news8Image,
+          date: "04-Jun-2021",
+          title:
+            "Photio presente junto a muralistas en el Dia del MedioAmbiente",
+          origin: "por Fractal",
+          description:
+            "Photio junto a artista nacional y Arcos Dorados crearon mural purificador y descontaminante del aire.",
+          url:
+            "https://www-latercera-com.cdn.ampproject.org/c/s/www.latercera.com/pulso/noticia/dia-del-medioambiente-presentan-mural-sustentable-que-purifica-y-descontamina-el-aire/WQDEFCFLQVFRXPEYZJINBPHDJM/?outputType=amp",
         },
       ],
     },
