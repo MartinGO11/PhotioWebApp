@@ -22,7 +22,35 @@ npm install
 npm run start
 ```
 
+## Deploy
+
+1. Install Firebase.
+
+   ```sh
+   npm install -g firebase-tools
+   ```
+
+2. Login with Firebase.
+
+   ```sh
+   firebase login
+   ```
+
+3. Add .env.production.local file with production params. Follow [.env.template](.env.template) format.
+4. Build the project
+
+   ```sh
+   npm run build
+   ```
+
+5. Deploy
+
+  ```sh
+  firebase deploy
+  ```
+
 ### Add Notice
+
 For add notice, go to _src/languages/esComponent.js_ and copy the schema below:
 
 ```js
@@ -36,7 +64,9 @@ For add notice, go to _src/languages/esComponent.js_ and copy the schema below:
     url: "https://www.example.com",
 },
 ```
+
 Change with your new parameters and paste in to array _items/homeView/newsResumenComponent/news_
+
 ## Author
 
 👤 **sergioeabarcaf**
