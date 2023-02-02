@@ -55,8 +55,8 @@ import serviceLogo from "../components/buy/serviceIcon.png";
 
 // WhatIsView
 import backgrounWhatIs from "../components/whatsIs/backgroundCarousel.png";
-import step1 from "../components/whatsIs/step1.svg";
-import step2 from "../components/whatsIs/step2.svg";
+import sashetphoto from "../components/whatsIs/sashetphoto.png";
+import AplicacionPHOTIO from "../components/whatsIs/AplicacionPHOTIO.mov";
 import certification1 from "../components/whatsIs/certification1.png";
 import certification2 from "../components/whatsIs/certification2.png";
 
@@ -65,29 +65,25 @@ export const items = {
     carouselContent: [
       {
         background: backgroundHome,
-        description: (
-          <p style={{ margin: "0px", padding: "0px" }}>
-            REPLICAMOS EL PROCESO DE <strong>FOTOSÍNTESIS</strong> PARA
-            ENTREGARTE <strong>AIRE PURO EN CUALQUIER LUGAR</strong>
+        description: [
+          <p style={{ margin: "0px", padding: "0px", fontSize: "50px"}}>
+            <strong>Un bosque en la palma de tu mano</strong>
+          </p>,
+          <p style={{ margin: "0px", padding: "0px", fontSize:"20px" }}>
+            1 metro cuadrado pintado con Photio equivale a la descontaminación que realizan 2 árboles adultos.
           </p>
-        ),
+        ],
       },
     ],
     welcomeComponent: {
       description: [
         <p style={{ margin: "0px", padding: "0px" }}>
-          Aplica <strong> Photio </strong> en murallas, estructuras metálicas,
-          calles o donde quieras.
-        </p>,
-        <p style={{ margin: "0px", padding: "0px" }}>
-          Aumenta positivamente la reputación <strong> medioambiental </strong>{" "}
-          de tu empresa y aporta a la comunidad en donde estás inserto.
+          <strong>1m2 pintado con Photio equivale al poder descontaminte de 2 árboles maduros.</strong>.
         </p>,
       ],
-      titleAction: "¡CONVERSEMOS!",
+      titleAction: "M2 PINTADOS",
       descriptionAction:
-        "Juntémosnos a discutir la problemática o desafio a resolver",
-      textButtonAction: "Contáctanos",
+        "00200",
     },
     indicatorComponent: {
       meters: {
@@ -632,58 +628,29 @@ export const items = {
     },
     items: [
       {
-        img: step1,
-        title: "Instrucciones de uso",
+        img: sashetphoto,
+        title: "La revolución sustentable",
         description: [
           <p
             style={{
-              padding: "0px",
+              position: "flex",
+              padding: "1x",
               marginBottom: "2px",
-              color: colors.gray_2,
+              color: colors.blue_1,
+              textAlign: "left",
             }}
           >
-            Incorpora Photio en el material que desees tales como:
-          </p>,
-          <p
-            style={{
-              fontWeight: "bold",
-              marginTop: "0px",
-              color: colors.gray_2,
-            }}
-          >
-            pintura, asfalto, concreto, hormigón u otro.
-          </p>,
-          <p style={{ padding: "0px", color: colors.gray_2 }}>
-            Observa como el material no cambia sus propiedades como color,
-            brillo o durabilidad, y aplica la mezcla donde desees.
-          </p>,
-          <p style={{ padding: "0px", fontWeight: "bold" }}>
-            Incorpóralo donde quieras sin restricciones
+            Photio es un <strong>aditivo para pinturas</strong> cuya tecnología permite a cualquier persona o institución transformar superficies en purificadores de aire y asi formar parte de la lucha contra el cambio climatico. ¡Sumate!
           </p>,
         ],
         actionTitle: "Conversemos",
       },
       {
-        img: step2,
-        title: "Funcionamiento",
+        video: AplicacionPHOTIO,
+        title: "Conoce como hicimos nuestras certificaciones",
         description: [
-          <p style={{ padding: "0px", color: colors.gray_2 }}>
-            El producto al distribuirse en el lugar de aplicación y tomar
-            contacto con la radiación solar, promueve la degradación y
-            transformación de sustancias contaminantes mediante una serie de
-            reacciones fotoquímicas.
-          </p>,
-          <p
-            style={{ padding: "0px", fontWeight: "bold", color: colors.gray_2 }}
-          >
-            A la fecha Photio ha demostrado su capacidad para remover de forma
-            eficiente: monóxido de carbono, óxidos de nitrógeno, óxidos de
-            azufre, metano, compuestos orgánicos volátiles, amoníaco, virus,
-            bacterias y hongos.
-          </p>,
-          <p style={{ padding: "0px", fontWeight: "bold" }}>
-            Observa como replicamos el proceso de fotosíntesis en el lugar de
-            aplicación.
+          <p style={{ padding: "0px", color: colors.blue_1, textAlign: "justify"}}>
+            Photio está certificado y validado por Universidades ¿Quieres saber cómo? conoce nuestro proceso de certificación también puedes descarga y revisa las certificaciones.
           </p>,
         ],
         actionTitle: "Contactos",

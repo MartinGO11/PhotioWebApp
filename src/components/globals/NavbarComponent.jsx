@@ -47,6 +47,7 @@ export const NavbarComponent = () => {
                     exact
                     to={item.to}
                     style={{
+                      position: "relative",
                       color: "inherit",
                       textDecoration: "none",
                       marginLeft: "3vw",

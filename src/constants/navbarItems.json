@@ -8,6 +8,10 @@
     "to": "/whatsIs"
   },
   {
+    "title": "Quienes somos",
+    "to": "/weare"
+  },
+  {
     "title": "Aplicaciones",
     "to": "/applications",
     "options":[

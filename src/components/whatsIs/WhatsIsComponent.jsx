@@ -30,14 +30,15 @@ export const WhatsIsComponent = ({ whatIsContent }) => {
                   <img
                     src={content.img}
                     alt={`Photio-WhatsIs-${index}`}
-                    style={{ maxWidth: "70%" }}
+                    style={{ maxWidth: "100%" }}
                   />
                 </Grid>
                 <Grid item xs={10} md={4}>
                   <h1
                     style={{
+                      textAlign: "left",
                       fontSize: "30px",
-                      fontWeight: "900",
+                      fontWeight: "300",
                       width: "60%",
                     }}
                     className={globalStyles.fontPoppins}
