@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Hidden } from "@material-ui/core";
-import logoPhotio from "./logoPhotioCarousel.svg";
+import logoPhotio from "./LogoPhotioBlanco.png";
 import MenuIcon from "@material-ui/icons/Menu";
 import { default as navbarItems } from "../../constants/navbarItems.json";
 import clsx from "clsx";
@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     width: 250,
   },
   fullList: {
+    position: "flex",
     width: "auto",
   },
 });
@@ -55,8 +56,8 @@ export const CarouselComponent = ({ carouselContent }) => {
         src={logoPhotio}
         alt="Photio-Logo"
         style={{
-          margin: "10% 35%",
-          maxWidth: "30%",
+          margin: "35% 10%",
+          maxWidth: "8%",
         }}
       />
 
